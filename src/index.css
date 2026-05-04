@@ -8,47 +8,47 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Auro Detail Studio — luxury dark automotive theme */
-    --background: 0 0% 5%;
-    --foreground: 40 30% 96%;
+    /* Auro Detail Studio — luxury LIGHT automotive theme */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 6%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 40 30% 96%;
+    --card: 0 0% 99%;
+    --card-foreground: 0 0% 6%;
 
-    --popover: 0 0% 7%;
-    --popover-foreground: 40 30% 96%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 6%;
 
-    --primary: 42 65% 55%;
-    --primary-foreground: 0 0% 6%;
+    --primary: 0 0% 6%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 40 30% 96%;
+    --secondary: 40 20% 96%;
+    --secondary-foreground: 0 0% 6%;
 
-    --muted: 0 0% 14%;
-    --muted-foreground: 40 10% 65%;
+    --muted: 40 15% 94%;
+    --muted-foreground: 0 0% 35%;
 
-    --accent: 42 75% 60%;
+    --accent: 42 75% 50%;
     --accent-foreground: 0 0% 6%;
 
     --destructive: 0 70% 50%;
-    --destructive-foreground: 40 30% 96%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 16%;
-    --input: 0 0% 14%;
-    --ring: 42 65% 55%;
+    --border: 0 0% 88%;
+    --input: 0 0% 92%;
+    --ring: 42 65% 50%;
 
     --radius: 0.25rem;
 
-    --gold: 42 75% 60%;
-    --gold-soft: 42 50% 45%;
-    --surface-elevated: 0 0% 10%;
+    --gold: 42 75% 45%;
+    --gold-soft: 42 50% 55%;
+    --surface-elevated: 0 0% 98%;
 
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 4%) 0%, hsl(0 0% 8%) 50%, hsl(42 30% 12%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(42 75% 60%) 0%, hsl(38 60% 45%) 100%);
-    --gradient-overlay: linear-gradient(180deg, hsla(0 0% 0% / 0.2) 0%, hsla(0 0% 0% / 0.85) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(40 20% 97%) 50%, hsl(42 30% 92%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(42 75% 50%) 0%, hsl(38 60% 40%) 100%);
+    --gradient-overlay: linear-gradient(180deg, hsla(0 0% 100% / 0.1) 0%, hsla(0 0% 0% / 0.55) 100%);
 
-    --shadow-gold: 0 10px 40px -10px hsl(42 75% 50% / 0.4);
-    --shadow-elegant: 0 20px 60px -20px hsl(0 0% 0% / 0.7);
+    --shadow-gold: 0 10px 40px -10px hsl(42 75% 45% / 0.35);
+    --shadow-elegant: 0 20px 60px -20px hsl(0 0% 0% / 0.15);
 
     --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
 
