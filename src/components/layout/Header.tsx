@@ -85,7 +85,7 @@ const Header = () => {
       </div>
 
       {/* Bottom dark nav bar */}
-      <div className="hidden lg:block bg-primary text-primary-foreground">
+      <div className="hidden lg:block bg-nav text-nav-foreground">
         <div className="container mx-auto">
           <nav className="flex items-center justify-center gap-10 h-12">
             <NavLink to="/" end className={linkClass}>Home</NavLink>

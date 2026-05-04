@@ -36,9 +36,27 @@ const slides = [
 ];
 
 const tabs = [
-  { label: "CERAMIC", to: "/services/ceramic-coating" },
-  { label: "PPF", to: "/services/ppf" },
-  { label: "DETAILING", to: "/services/car-detailing" },
+  {
+    label: "CERAMIC",
+    to: "/services/ceramic-coating",
+    heading: "Find Your Perfect Ceramic Coating",
+    placeholder1: "Which ceramic package interests you?",
+    placeholder2: "Do you have a vehicle in mind?",
+  },
+  {
+    label: "PPF",
+    to: "/services/ppf",
+    heading: "Find Your Ideal PPF Plan",
+    placeholder1: "Which PPF coverage interests you?",
+    placeholder2: "Do you have a vehicle in mind?",
+  },
+  {
+    label: "DETAILING",
+    to: "/services/car-detailing",
+    heading: "Find Your Detailing Service",
+    placeholder1: "Which detailing package interests you?",
+    placeholder2: "Do you have a vehicle in mind?",
+  },
 ];
 
 const HeroSlider = () => {
@@ -56,7 +74,7 @@ const HeroSlider = () => {
 
   return (
     <section className="relative">
-      <div className="relative h-[78vh] min-h-[520px] overflow-hidden bg-primary">
+      <div className="relative h-[58vh] min-h-[400px] max-h-[560px] overflow-hidden bg-primary">
         {slides.map((s, i) => (
           <div
             key={i}
@@ -67,7 +85,7 @@ const HeroSlider = () => {
             <div className="relative container mx-auto h-full flex items-center">
               <div className="max-w-2xl text-white ml-auto md:mr-8 lg:mr-16 text-right md:text-right pr-4">
                 <p className="text-xs tracking-[0.4em] uppercase text-gold mb-4 animate-fade-in">{s.eyebrow}</p>
-                <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-7xl leading-[1] animate-fade-up">
+                <h1 className="font-display font-bold text-3xl sm:text-4xl lg:text-6xl leading-[1] animate-fade-up">
                   {s.title}
                   <br />
                   <span className="text-gold">{s.titleAccent}</span>
@@ -106,7 +124,7 @@ const HeroSlider = () => {
         </button>
 
         {/* Dots */}
-        <div className="absolute bottom-28 md:bottom-24 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+        <div className="absolute bottom-20 md:bottom-16 left-1/2 -translate-x-1/2 flex gap-2 z-10">
           {slides.map((_, i) => (
             <button
               key={i}
@@ -143,7 +161,7 @@ const HeroSlider = () => {
       <div className="container mx-auto mt-6 mb-12">
         <div className="bg-card border border-border rounded-2xl shadow-elegant p-6 md:p-8">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-            <h2 className="font-display text-2xl md:text-3xl">Find Your Desired Service</h2>
+            <h2 className="font-display text-xl md:text-2xl">{tabs[tab].heading}</h2>
             <div className="flex gap-2">
               <button className="px-5 h-9 rounded-full bg-primary text-primary-foreground text-xs font-semibold tracking-widest">BY SERVICE</button>
               <button className="px-5 h-9 rounded-full bg-secondary text-foreground/70 text-xs font-semibold tracking-widest hover:bg-muted">BY VEHICLE</button>
@@ -151,17 +169,19 @@ const HeroSlider = () => {
           </div>
           <div className="grid md:grid-cols-[1fr_1fr_auto] gap-3">
             <input
+              key={`p1-${tab}`}
               type="text"
-              placeholder="Which service interests you?"
+              placeholder={tabs[tab].placeholder1}
               className="h-14 px-5 rounded-full bg-secondary/50 border border-border text-sm focus:outline-none focus:border-gold transition-smooth"
             />
             <input
+              key={`p2-${tab}`}
               type="text"
-              placeholder="Do you have a vehicle in mind?"
+              placeholder={tabs[tab].placeholder2}
               className="h-14 px-5 rounded-full bg-secondary/50 border border-border text-sm focus:outline-none focus:border-gold transition-smooth"
             />
             <Link
-              to="/contact"
+              to={tabs[tab].to}
               className="h-14 px-10 grid place-items-center rounded-full bg-gold text-primary text-sm font-semibold tracking-widest hover:shadow-gold transition-smooth"
             >
               SEARCH
