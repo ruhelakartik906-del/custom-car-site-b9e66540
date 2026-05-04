@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Sparkles, Droplets, Star, Award, Clock, CheckCircle2 } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ArrowRight, Shield, Sparkles, Droplets, Star, Award, Clock, CheckCircle2, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import heroCar from "@/assets/hero-car.jpg";
 import ceramic from "@/assets/service-ceramic.jpg";
 import ppf from "@/assets/service-ppf.jpg";
@@ -15,7 +16,25 @@ const services = [
   { title: "Paint Correction", desc: "Multi-stage compounding to remove swirls, holograms and oxidation.", img: paint, to: "/services/paint-correction", icon: Award },
 ];
 
+const testimonials = [
+  { q: "The Scorpio looks deeper, blacker and shinier than the day I drove it home. Worth every rupee.", n: "Rohan M.", c: "Scorpio-N Z8" },
+  { q: "PPF on the front end has already saved me twice on highway runs. Invisible, perfect.", n: "Karan S.", c: "Fortuner Legender" },
+  { q: "Five years on, the coating still beads water like day one. Auro is the real deal.", n: "Priya N.", c: "Innova Hycross" },
+  { q: "Booked a full detail and ceramic — the car looks brand new. Professional team and on-time delivery.", n: "Aditya R.", c: "Thar LX" },
+  { q: "Paint correction wiped years of swirls in a single weekend. The gloss is unreal.", n: "Megha K.", c: "Seltos GTX+" },
+];
+
 const Home = () => {
+  const [active, setActive] = useState(0);
+  const total = testimonials.length;
+
+  useEffect(() => {
+    const id = setInterval(() => setActive((p) => (p + 1) % total), 4000);
+    return () => clearInterval(id);
+  }, [total]);
+
+  const visible = [0, 1, 2].map((i) => testimonials[(active + i) % total]);
+
   return (
     <div>
       {/* HERO */}
@@ -186,21 +205,47 @@ const Home = () => {
             <p className="text-xs tracking-[0.4em] uppercase text-gold mb-3">Client Stories</p>
             <h2 className="font-display text-4xl md:text-5xl">Trusted by Enthusiasts</h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { q: "The Scorpio looks deeper, blacker and shinier than the day I drove it home. Worth every rupee.", n: "Rohan M.", c: "Scorpio-N Z8" },
-              { q: "PPF on the front end has already saved me twice on highway runs. Invisible, perfect.", n: "Karan S.", c: "Fortuner Legender" },
-              { q: "Five years on, the coating still beads water like day one. Auro is the real deal.", n: "Priya N.", c: "Innova Hycross" },
-            ].map((t) => (
-              <div key={t.n} className="bg-card border border-border p-8 rounded-sm">
-                <div className="flex gap-1 text-gold">{Array.from({length: 5}).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}</div>
-                <p className="mt-5 text-foreground/90 italic leading-relaxed">"{t.q}"</p>
-                <div className="mt-6 pt-6 border-t border-border">
-                  <p className="font-display text-lg">{t.n}</p>
-                  <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1">{t.c}</p>
+          <div className="relative">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-500">
+              {visible.map((t, idx) => (
+                <div key={`${active}-${idx}`} className="bg-card border border-border p-8 rounded-sm animate-fade-up">
+                  <Quote className="h-7 w-7 text-gold/60" />
+                  <div className="flex gap-1 text-gold mt-3">{Array.from({length: 5}).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}</div>
+                  <p className="mt-5 text-foreground/90 italic leading-relaxed">"{t.q}"</p>
+                  <div className="mt-6 pt-6 border-t border-border">
+                    <p className="font-display text-lg">{t.n}</p>
+                    <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1">{t.c}</p>
+                  </div>
                 </div>
+              ))}
+            </div>
+
+            <div className="mt-10 flex items-center justify-center gap-6">
+              <button
+                onClick={() => setActive((p) => (p - 1 + total) % total)}
+                aria-label="Previous testimonial"
+                className="h-10 w-10 grid place-items-center rounded-sm border border-border hover:border-gold hover:text-gold transition-smooth"
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </button>
+              <div className="flex gap-2">
+                {testimonials.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setActive(i)}
+                    aria-label={`Go to testimonial ${i + 1}`}
+                    className={`h-1.5 rounded-full transition-all ${i === active ? "w-8 bg-gold" : "w-2 bg-border hover:bg-gold/50"}`}
+                  />
+                ))}
               </div>
-            ))}
+              <button
+                onClick={() => setActive((p) => (p + 1) % total)}
+                aria-label="Next testimonial"
+                className="h-10 w-10 grid place-items-center rounded-sm border border-border hover:border-gold hover:text-gold transition-smooth"
+              >
+                <ChevronRight className="h-4 w-4" />
+              </button>
+            </div>
           </div>
         </div>
       </section>
