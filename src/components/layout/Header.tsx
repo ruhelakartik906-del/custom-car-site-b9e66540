@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown, Sparkles, Search, MapPin, User } from "lucide-react";
 import { cn } from "@/lib/utils";
+import scorpioThumb from "@/assets/vehicle-scorpio.jpg";
+import fortunerThumb from "@/assets/vehicle-fortuner.jpg";
 
 const services = [
   { label: "Ceramic Coating", to: "/services/ceramic-coating" },
@@ -11,8 +13,8 @@ const services = [
 ];
 
 const vehicles = [
-  { label: "Mahindra Scorpio", to: "/vehicles/scorpio" },
-  { label: "Toyota Fortuner", to: "/vehicles/fortuner" },
+  { label: "Mahindra Scorpio", to: "/vehicles/scorpio", img: scorpioThumb, sub: "Made for the Beast" },
+  { label: "Toyota Fortuner", to: "/vehicles/fortuner", img: fortunerThumb, sub: "King of the Highway" },
 ];
 
 const Header = () => {
@@ -125,15 +127,19 @@ const Header = () => {
               >
                 Vehicles <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" />
               </button>
-              <div className="absolute left-1/2 -translate-x-1/2 top-full opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-smooth z-50">
-                <div className="w-56 rounded-sm border border-border bg-popover shadow-elegant overflow-hidden">
+              <div className="absolute left-1/2 -translate-x-1/2 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-smooth z-50">
+                <div className="w-72 rounded-2xl border border-border bg-secondary/95 backdrop-blur shadow-elegant overflow-hidden p-2">
                   {vehicles.map((v) => (
                     <Link
                       key={v.to}
                       to={v.to}
-                      className="block px-5 py-3 text-sm text-popover-foreground/85 hover:bg-secondary hover:text-gold transition-smooth border-b border-border/40 last:border-0"
+                      className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm text-popover-foreground/85 hover:bg-background hover:text-gold transition-smooth"
                     >
-                      {v.label}
+                      <img src={v.img} alt={v.label} className="h-11 w-11 rounded-full object-cover ring-2 ring-border" />
+                      <span className="flex flex-col leading-tight text-left">
+                        <span className="font-medium">{v.label}</span>
+                        <span className="text-[11px] uppercase tracking-widest text-muted-foreground">{v.sub}</span>
+                      </span>
                     </Link>
                   ))}
                 </div>
