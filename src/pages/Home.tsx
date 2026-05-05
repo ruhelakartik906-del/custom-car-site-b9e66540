@@ -9,6 +9,7 @@ import paint from "@/assets/service-paint.jpg";
 import scorpio from "@/assets/vehicle-scorpio.jpg";
 import fortuner from "@/assets/vehicle-fortuner.jpg";
 import HeroSlider from "@/components/HeroSlider";
+import dealerHandover from "@/assets/dealer-handover.jpg";
 
 const services = [
   { title: "Ceramic Coating", desc: "9H hydrophobic glass shield with up to 5 years of liquid-glass gloss.", img: ceramic, to: "/services/ceramic-coating", icon: Shield },
