@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { ArrowRight, Shield, Sparkles, Droplets, Star, Award, Clock, CheckCircle2, Quote, ChevronLeft, ChevronRight, Car, SprayCan, Phone, MessageCircle, CalendarCheck, Headphones } from "lucide-react";
+import { ArrowRight, Shield, Sparkles, Droplets, Star, Award, Clock, CheckCircle2, Quote, ChevronLeft, ChevronRight, Car, SprayCan, Phone, MessageCircle, CalendarCheck, Headphones, BadgeCheck } from "lucide-react";
 import heroCar from "@/assets/hero-car.jpg";
 import ceramic from "@/assets/service-ceramic.jpg";
 import ppf from "@/assets/service-ppf.jpg";
@@ -19,23 +19,23 @@ const services = [
 ];
 
 const testimonials = [
-  { q: "The Scorpio looks deeper, blacker and shinier than the day I drove it home. Worth every rupee.", n: "Rohan M.", c: "Scorpio-N Z8" },
-  { q: "PPF on the front end has already saved me twice on highway runs. Invisible, perfect.", n: "Karan S.", c: "Fortuner Legender" },
-  { q: "Five years on, the coating still beads water like day one. Auro is the real deal.", n: "Priya N.", c: "Innova Hycross" },
-  { q: "Booked a full detail and ceramic — the car looks brand new. Professional team and on-time delivery.", n: "Aditya R.", c: "Thar LX" },
-  { q: "Paint correction wiped years of swirls in a single weekend. The gloss is unreal.", n: "Megha K.", c: "Seltos GTX+" },
+  { q: "The Scorpio looks deeper, blacker and shinier than the day I drove it home. Worth every rupee.", n: "Rohan M.", c: "Scorpio-N Z8", img: "https://i.pravatar.cc/150?img=12" },
+  { q: "PPF on the front end has already saved me twice on highway runs. Invisible, perfect.", n: "Karan S.", c: "Fortuner Legender", img: "https://i.pravatar.cc/150?img=15" },
+  { q: "Five years on, the coating still beads water like day one. Auro is the real deal.", n: "Priya N.", c: "Innova Hycross", img: "https://i.pravatar.cc/150?img=47" },
+  { q: "Booked a full detail and ceramic — the car looks brand new. Professional team and on-time delivery.", n: "Aditya R.", c: "Thar LX", img: "https://i.pravatar.cc/150?img=33" },
+  { q: "Paint correction wiped years of swirls in a single weekend. The gloss is unreal.", n: "Megha K.", c: "Seltos GTX+", img: "https://i.pravatar.cc/150?img=49" },
 ];
 
 const Home = () => {
   const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(false);
   const total = testimonials.length;
 
   useEffect(() => {
+    if (paused) return;
     const id = setInterval(() => setActive((p) => (p + 1) % total), 4000);
     return () => clearInterval(id);
-  }, [total]);
-
-  const visible = [0, 1, 2].map((i) => testimonials[(active + i) % total]);
+  }, [total, paused]);
 
   return (
     <div>
@@ -263,49 +263,68 @@ const Home = () => {
         <div className="container mx-auto">
           <div className="text-center mb-14">
             <p className="text-xs tracking-[0.4em] uppercase text-gold mb-3">Client Stories</p>
-            <h2 className="font-display text-4xl md:text-5xl">Trusted by Enthusiasts</h2>
+            <h2 className="font-display text-4xl md:text-5xl">What Our Clients Say</h2>
           </div>
-          <div className="relative">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all duration-500">
-              {visible.map((t, idx) => (
-                <div key={`${active}-${idx}`} className="bg-card border border-border p-8 rounded-sm animate-fade-up">
-                  <Quote className="h-7 w-7 text-gold/60" />
-                  <div className="flex gap-1 text-gold mt-3">{Array.from({length: 5}).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}</div>
-                  <p className="mt-5 text-foreground/90 italic leading-relaxed">"{t.q}"</p>
-                  <div className="mt-6 pt-6 border-t border-border">
-                    <p className="font-display text-lg">{t.n}</p>
-                    <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1">{t.c}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
 
-            <div className="mt-10 flex items-center justify-center gap-6">
-              <button
-                onClick={() => setActive((p) => (p - 1 + total) % total)}
-                aria-label="Previous testimonial"
-                className="h-10 w-10 grid place-items-center rounded-sm border border-border hover:border-gold hover:text-gold transition-smooth"
+          <div
+            className="relative group max-w-[1200px] mx-auto"
+            onMouseEnter={() => setPaused(true)}
+            onMouseLeave={() => setPaused(false)}
+          >
+            <div className="overflow-hidden px-2">
+              <div
+                className="flex transition-transform duration-700 ease-in-out"
+                style={{ transform: `translateX(-${active * (100 / 3)}%)` }}
               >
-                <ChevronLeft className="h-4 w-4" />
-              </button>
-              <div className="flex gap-2">
-                {testimonials.map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setActive(i)}
-                    aria-label={`Go to testimonial ${i + 1}`}
-                    className={`h-1.5 rounded-full transition-all ${i === active ? "w-8 bg-gold" : "w-2 bg-border hover:bg-gold/50"}`}
-                  />
+                {[...testimonials, ...testimonials.slice(0, 3)].map((t, idx) => (
+                  <div
+                    key={idx}
+                    className="w-1/3 shrink-0 px-3"
+                  >
+                    <div className="relative bg-card border border-border p-8 rounded-[20px] shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 ease-in-out h-full flex flex-col">
+                      <Quote className="absolute top-5 left-5 h-9 w-9 text-gold/30" />
+                      <div className="flex justify-end gap-0.5 text-gold">
+                        {Array.from({ length: 5 }).map((_, i) => (
+                          <Star key={i} className="h-4 w-4 fill-current" />
+                        ))}
+                      </div>
+                      <p className="mt-6 text-foreground/90 italic leading-relaxed flex-1">"{t.q}"</p>
+                      <div className="mt-6 pt-6 border-t border-border flex items-center gap-4">
+                        <img
+                          src={t.img}
+                          alt={t.n}
+                          loading="lazy"
+                          className="h-12 w-12 rounded-full object-cover border-2 border-gold/40"
+                        />
+                        <div className="flex-1">
+                          <p className="font-display text-lg leading-tight">{t.n}</p>
+                          <p className="text-xs uppercase tracking-widest text-muted-foreground mt-1">{t.c}</p>
+                        </div>
+                      </div>
+                      <div className="mt-4 inline-flex self-start items-center gap-1.5 rounded-full bg-green-100 text-green-700 px-3 py-1 text-[11px] font-semibold">
+                        <BadgeCheck className="h-3.5 w-3.5" />
+                        Verified
+                      </div>
+                    </div>
+                  </div>
                 ))}
               </div>
-              <button
-                onClick={() => setActive((p) => (p + 1) % total)}
-                aria-label="Next testimonial"
-                className="h-10 w-10 grid place-items-center rounded-sm border border-border hover:border-gold hover:text-gold transition-smooth"
-              >
-                <ChevronRight className="h-4 w-4" />
-              </button>
             </div>
+
+            <button
+              onClick={() => setActive((p) => (p - 1 + total) % total)}
+              aria-label="Previous testimonial"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 h-12 w-12 grid place-items-center rounded-full bg-card border border-border shadow-lg opacity-0 group-hover:opacity-100 hover:border-gold hover:text-gold transition-all duration-300"
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            <button
+              onClick={() => setActive((p) => (p + 1) % total)}
+              aria-label="Next testimonial"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 h-12 w-12 grid place-items-center rounded-full bg-card border border-border shadow-lg opacity-0 group-hover:opacity-100 hover:border-gold hover:text-gold transition-all duration-300"
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
           </div>
         </div>
       </section>
