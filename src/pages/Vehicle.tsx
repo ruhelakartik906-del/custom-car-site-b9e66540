@@ -1,13 +1,14 @@
 import { useParams, Link, Navigate } from "react-router-dom";
-import { ArrowRight, CheckCircle2, MessageCircle, Phone, Gauge, Cog, Compass, Star } from "lucide-react";
+import { ArrowRight, CheckCircle2, MessageCircle, Phone, Gauge, Cog, Compass, Star, Shield, Sparkles, Droplets, Sun, Mountain, Wrench, Award, Trophy, Crown, Fuel, Users } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import scorpio from "@/assets/vehicle-scorpio.jpg";
 import fortuner from "@/assets/vehicle-fortuner.jpg";
 
 type Spec = { icon: typeof Gauge; label: string; value: string };
+type Benefit = { icon: typeof Gauge; title: string; desc: string };
 type VehicleData = {
   name: string; eyebrow: string; tagline: string; img: string; about: string;
-  recommended: string[]; bullets: string[]; specs: Spec[]; gallery: string[];
+  benefits: Benefit[]; bullets: string[]; specs: Spec[]; gallery: string[];
   startingPrice: string; ctaQuestion: string;
 };
 
@@ -18,7 +19,14 @@ const data: Record<string, VehicleData> = {
     tagline: "Specialist detailing for the Scorpio Classic, Scorpio-N and Scorpio Z8L.",
     img: scorpio,
     about: "The Scorpio's bold cladding, large alloy faces and high-impact bonnet make it a stone-chip magnet on Indian highways. Our PPF kits are pre-cut for every Scorpio variant, and our coatings are tuned for matte, gloss and dual-tone finishes.",
-    recommended: ["Front-end PPF (bonnet, fenders, bumper)", "9H Ceramic Coating (full body)", "Alloy wheel coating", "Interior leather & fabric protection", "Underbody anti-rust treatment"],
+    benefits: [
+      { icon: Mountain, title: "Built for Tough Terrain", desc: "Body-on-frame chassis aur high ground clearance — kharab roads aur off-road trails dono ke liye perfect." },
+      { icon: Shield, title: "Rugged Stone-Chip Defense", desc: "Pre-cut PPF kits bonnet, fenders aur bumper ko highway pe stone-chips se safe rakhte hain." },
+      { icon: Sparkles, title: "Deep Mirror Gloss", desc: "9H ceramic coating Napoli Black aur dual-tone finishes par showroom-jaisi gehri shine deti hai." },
+      { icon: Sun, title: "UV & Heat Protection", desc: "Coating paint ko sun fade, oxidation aur Indian summer heat se long-term protect karti hai." },
+      { icon: Droplets, title: "Easy Wash Hydrophobic", desc: "Pani aur mud beads hoke beh jaate hain — har weekend dhone ki zarurat nahi padti." },
+      { icon: Wrench, title: "Long-Term Resale Value", desc: "Interior leather aur underbody anti-rust treatment Scorpio ki resale value high banaye rakhte hain." },
+    ],
     bullets: ["Pre-cut PPF templates for every variant", "Matte-safe coatings for Scorpio Black Edition", "Roof-rail and ladder protection", "Gloss-deepening polish for Napoli Black"],
     specs: [
       { icon: Gauge, label: "Engine Options", value: "mHawk Diesel · mStallion Petrol" },
@@ -36,7 +44,14 @@ const data: Record<string, VehicleData> = {
     tagline: "Concours-grade detailing for the Fortuner, Legender and GR-Sport.",
     img: fortuner,
     about: "The Fortuner deserves a finish as imposing as its stance. We specialize in mirror-deep gloss for Attitude Black and Super White, with full-body PPF for owners who tour the country and refuse to compromise.",
-    recommended: ["Full-body PPF kit", "10H Diamond Ceramic Coating", "Interior leather & wood-trim restoration", "Headlight PPF + clarity restoration", "Chrome-grille protection film"],
+    benefits: [
+      { icon: Crown, title: "King-of-Road Presence", desc: "Imposing stance aur premium finish — Fortuner ko sabse alag aur commanding look milta hai." },
+      { icon: Shield, title: "Full-Body PPF Armor", desc: "Self-healing transparent film puri body ko scratches, swirls aur stone-chips se bachata hai." },
+      { icon: Sparkles, title: "10H Diamond Gloss", desc: "Attitude Black aur Super White par mirror-deep wet look jo barso tak chalti hai." },
+      { icon: Fuel, title: "Long-Haul Ready", desc: "Underbody coating aur sealants country tours aur highways ke liye fully prepared rakhte hain." },
+      { icon: Award, title: "Concours-Grade Detailing", desc: "Hand-polish aur multi-stage correction Toyota ke hard clear-coat par flawless finish dete hain." },
+      { icon: Users, title: "Premium Interior Care", desc: "Leather conditioning aur wood-trim restoration cabin ko brand-new feel deta hai har trip pe." },
+    ],
     bullets: ["Specialist polish on Toyota's hard clear-coat", "Tailored kits for Legender front-end", "Chrome trim sealants to prevent pitting", "Long-haul-ready underbody coating"],
     specs: [
       { icon: Gauge, label: "Engine Options", value: "2.8L Diesel · 2.7L Petrol" },
@@ -117,13 +132,25 @@ const Vehicle = () => {
 
       <section className="py-20 border-t border-border bg-secondary/20">
         <div className="container mx-auto">
-          <h2 className="font-display text-4xl text-center">Recommended Packages</h2>
-          <div className="mt-4 mx-auto h-px w-20 gold-divider" />
+          <div className="text-center max-w-2xl mx-auto">
+            <p className="text-xs tracking-[0.4em] uppercase text-gold mb-3">Why You'll Love It</p>
+            <h2 className="font-display text-4xl md:text-5xl">Key Benefits</h2>
+            <div className="mt-4 mx-auto h-px w-20 gold-divider" />
+          </div>
           <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {v.recommended.map((r, i) => (
-              <div key={r} className="bg-card border border-border p-7 rounded-2xl">
-                <div className="font-display text-3xl text-gold/40">{String(i + 1).padStart(2, "0")}</div>
-                <p className="mt-3 text-foreground">{r}</p>
+            {v.benefits.map((b, i) => (
+              <div
+                key={b.title}
+                className="bg-card border border-border p-7 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-gold"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="h-12 w-12 rounded-xl bg-gold/10 grid place-items-center">
+                    <b.icon className="h-6 w-6 text-gold" />
+                  </div>
+                  <span className="font-display text-3xl text-gold/30">{String(i + 1).padStart(2, "0")}</span>
+                </div>
+                <h3 className="mt-5 font-display text-xl text-foreground">{b.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
               </div>
             ))}
           </div>
