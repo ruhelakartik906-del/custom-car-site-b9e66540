@@ -226,6 +226,23 @@ const Home = () => {
         </div>
       </section>
 
+      {/* CTA */}
+      <section className="relative overflow-hidden border-b border-border">
+        <div className="absolute inset-0">
+          <img src={heroCar} alt="" className="h-full w-full object-cover" loading="lazy" />
+          <div className="absolute inset-0 bg-background/85" />
+        </div>
+        <div className="relative container mx-auto py-24 text-center">
+          <p className="text-xs tracking-[0.4em] uppercase text-gold mb-4">Ready when you are</p>
+          <h2 className="font-display text-4xl md:text-6xl max-w-3xl mx-auto leading-tight">
+            Let's give your car the finish it deserves.
+          </h2>
+          <Link to="/contact" className="mt-9 inline-flex items-center gap-2 px-8 py-4 bg-gradient-gold text-primary-foreground rounded-sm text-sm tracking-[0.2em] uppercase hover:shadow-gold transition-smooth">
+            Schedule a Visit <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </section>
+
       {/* SERVICES */}
       <section className="py-24 border-b border-border">
         <div className="container mx-auto">
@@ -345,23 +362,6 @@ const Home = () => {
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed max-w-xs mx-auto">{b.d}</p>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={heroCar} alt="" className="h-full w-full object-cover" loading="lazy" />
-          <div className="absolute inset-0 bg-background/85" />
-        </div>
-        <div className="relative container mx-auto py-24 text-center">
-          <p className="text-xs tracking-[0.4em] uppercase text-gold mb-4">Ready when you are</p>
-          <h2 className="font-display text-4xl md:text-6xl max-w-3xl mx-auto leading-tight">
-            Let's give your car the finish it deserves.
-          </h2>
-          <Link to="/contact" className="mt-9 inline-flex items-center gap-2 px-8 py-4 bg-gradient-gold text-primary-foreground rounded-sm text-sm tracking-[0.2em] uppercase hover:shadow-gold transition-smooth">
-            Schedule a Visit <ArrowRight className="h-4 w-4" />
-          </Link>
         </div>
       </section>
     </div>
