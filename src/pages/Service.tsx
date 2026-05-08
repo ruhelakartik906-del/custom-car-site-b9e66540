@@ -458,6 +458,32 @@ const Service = () => {
         </div>
       </section>
 
+      {/* FAQs */}
+      {s.faqs && (
+        <section className="py-20">
+          <div className="container mx-auto max-w-3xl">
+            <div className="text-center mb-10">
+              <p className="text-xs tracking-[0.4em] uppercase text-gold mb-3">FAQ</p>
+              <h3 className="font-display text-3xl md:text-4xl">Frequently Asked Questions</h3>
+            </div>
+            <div className="space-y-4">
+              {s.faqs.map((f, i) => (
+                <details
+                  key={i}
+                  className="group rounded-xl border border-border bg-card p-5 hover:border-gold transition-smooth open:border-gold"
+                >
+                  <summary className="flex items-center justify-between cursor-pointer list-none">
+                    <span className="font-medium text-sm md:text-base pr-4">{f.q}</span>
+                    <ArrowRight className="h-4 w-4 text-gold shrink-0 transition-transform group-open:rotate-90" />
+                  </summary>
+                  <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* CONTACT CTA */}
       <section className="py-20">
         <div className="container mx-auto max-w-3xl">
