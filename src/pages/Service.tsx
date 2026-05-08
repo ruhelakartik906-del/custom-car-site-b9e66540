@@ -789,6 +789,85 @@ const data: Record<string, ServiceData> = {
       { q: "Is graphene coating worth it for luxury cars?", a: "Yes, graphene coating is an excellent paint protection solution for luxury and premium vehicles." },
     ],
   },
+  "car-rubbing-polishing": {
+    eyebrow: "Professional Paint Enhancement",
+    title: "Car Rubbing & Polishing in Meerut",
+    subtitle: "Restore paint gloss, remove dullness, and achieve a showroom-quality mirror finish with advanced machine polishing.",
+    img: paint,
+    intro:
+      "Welcome to CLNHYGEN — your trusted destination for professional car rubbing and polishing services in Meerut. We specialize in restoring paint gloss, removing dullness, enhancing shine, and improving paint clarity using advanced machine polishing techniques and premium detailing products. Over time, vehicle paint loses its original shine due to dust, sunlight, improper washing, swirl marks, oxidation, and daily wear. Our professional rubbing and polishing services restore smoothness, depth, and mirror-like reflection for a showroom-quality finish.",
+    benefits: [
+      "Enhances Paint Shine",
+      "Improves Paint Clarity",
+      "Restores Smooth Surface Finish",
+      "Removes Minor Surface Marks",
+      "Reduces Paint Dullness",
+      "Improves Reflection & Depth",
+      "Enhances Overall Vehicle Appearance",
+    ],
+    removes: {
+      heading: "Paint Problems We Help Improve",
+      items: ["Paint Dullness", "Light Swirl Marks", "Minor Surface Defects", "Oxidation Effects", "Water Spot Marks", "Improper Wash Marks", "Faded Paint Appearance"],
+    },
+    whyUs: [
+      "Skilled Detailing Experts",
+      "Premium Polishing Compounds",
+      "Advanced Machine Polishing",
+      "Safe Paint Enhancement Techniques",
+      "Luxury Finishing Standards",
+      "Attention to Detail",
+      "Professional Paint Care Solutions",
+    ],
+    vehicles: ["Luxury Cars", "SUVs", "Sports Cars", "Daily Driven Vehicles", "Premium Bikes"],
+    whatIs: {
+      heading: "What is Car Rubbing & Polishing?",
+      body: "Car rubbing and polishing is a professional paint enhancement process that improves paint gloss, smoothness, and reflection while reducing light defects and dullness from the paint surface. Unlike basic washing methods, professional polishing uses machine polishing systems, premium compounds, and specialized techniques to restore paint appearance safely.",
+    },
+    finishes: [
+      { name: "Car Polishing", desc: "Enhances paint gloss, improves reflection, reduces light surface marks, and delivers faster paint enhancement results with a smooth, shiny finish." },
+      { name: "Paint Correction", desc: "Removes deeper defects with multi-stage machine correction, advanced defect removal, and higher paint refinement for flawless results." },
+    ],
+    coverage: {
+      heading: "Our Car Polishing Process",
+      items: [
+        "Deep Exterior Wash",
+        "Paint Surface Inspection",
+        "Surface Decontamination",
+        "Clay Bar Treatment",
+        "Machine Rubbing Process",
+        "Multi-Stage Polishing",
+        "Gloss Enhancement",
+        "Paint Protection Finishing",
+      ],
+    },
+    models: ["Thar", "Fortuner", "Scorpio N", "BMW", "Audi", "Mercedes-Benz", "Defender", "Safari", "Creta", "Verna"],
+    maintenance: [
+      "Use pH-neutral shampoo",
+      "Avoid harsh chemicals",
+      "Wash with microfiber cloths",
+      "Follow proper detailing methods",
+      "Schedule periodic maintenance washes",
+    ],
+    comparison: {
+      heading: "Why Regular Polishing Matters",
+      intro: "Professional car polishing helps maintain paint appearance, preserve surface smoothness, and keep your vehicle looking newer for longer.",
+      items: [
+        "Maintain Paint Appearance",
+        "Preserve Surface Smoothness",
+        "Improve Vehicle Shine",
+        "Reduce Paint Dullness",
+        "Enhance Resale Value",
+        "Maintain Premium Exterior Finish",
+      ],
+    },
+    faqs: [
+      { q: "Does polishing remove scratches?", a: "Polishing helps reduce minor surface scratches and swirl marks. Deep scratches may require paint correction or repair work." },
+      { q: "How often should I polish my car?", a: "Regular polishing helps maintain gloss, smoothness, and paint appearance depending on vehicle usage and conditions." },
+      { q: "Is machine polishing safe for car paint?", a: "Yes, professional machine polishing performed by trained experts is safe and effective." },
+      { q: "What is the difference between rubbing and polishing?", a: "Rubbing generally involves defect removal, while polishing enhances gloss and smoothness for a refined finish." },
+      { q: "Does polishing improve paint shine?", a: "Yes, professional polishing significantly improves paint gloss, reflection, and overall vehicle appearance." },
+    ],
+  },
 };
 
 const allServices = [
@@ -802,7 +881,7 @@ const allServices = [
   { name: "Headlight Restoration", to: "/services/headlight-restoration" },
   { name: "Engine Bay Cleaning", to: "/services/engine-bay-detailing" },
   { name: "Alloy Wheel Detailing", to: "/services/car-detailing" },
-  { name: "Car Rubbing & Polishing", to: "/services/paint-correction" },
+  { name: "Car Rubbing & Polishing", to: "/services/car-rubbing-polishing" },
   { name: "Dent Paint & Body Shop", to: "/services/dent-paint" },
 ];
 
