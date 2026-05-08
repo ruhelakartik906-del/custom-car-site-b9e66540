@@ -46,7 +46,7 @@ const data: Record<string, ServiceData> = {
     ],
     removes: {
       heading: "PPF Protects Against",
-      items: ["Stone Chips", "Minor Scratches", "Road Debris", "Swirl Marks", "Bird Droppings", "UV Damage", "Paint Fading", "Hard Water Spots"],
+      items: ["Stone Chips", "Minor Scratches", "Road Debris", "Swirl Marks", "Bird Droppings", "UV Damage"],
     },
     whyUs: [
       "Experienced PPF Installation Experts",
@@ -55,7 +55,6 @@ const data: Record<string, ServiceData> = {
       "Seamless Edge Finishing",
       "Premium Imported Films",
       "Dust-Controlled Installation Environment",
-      "Long Lasting Protection",
     ],
     whatIs: {
       heading: "What is Paint Protection Film (PPF)?",
@@ -74,7 +73,6 @@ const data: Record<string, ServiceData> = {
         "Door Edge Protection",
         "Headlight PPF",
         "Side Mirror PPF",
-        "Piano Black Interior PPF",
       ],
     },
     models: ["Thar", "Fortuner", "Scorpio N", "BMW", "Mercedes-Benz", "Audi", "Defender", "Safari", "Creta", "Verna"],
@@ -122,7 +120,7 @@ const data: Record<string, ServiceData> = {
     ],
     removes: {
       heading: "Ceramic Coating Protects Against",
-      items: ["UV Rays", "Paint Oxidation", "Dirt & Dust", "Water Spots", "Bird Droppings", "Chemical Contaminants", "Minor Surface Damage"],
+      items: ["UV Rays", "Paint Oxidation", "Dirt & Dust", "Water Spots", "Bird Droppings", "Chemical Contaminants"],
     },
     whyUs: [
       "Premium Quality Coating Products",
@@ -149,6 +147,7 @@ const data: Record<string, ServiceData> = {
         "Clay Bar Treatment",
         "Paint Correction & Polishing",
         "Removal of Swirl Marks & Imperfections",
+        "Paint Surface Inspection Before Coating",
       ],
     },
     models: ["Thar", "Fortuner", "Scorpio N", "BMW", "Audi", "Mercedes-Benz", "Defender", "Creta", "Verna", "Safari"],
@@ -196,7 +195,7 @@ const data: Record<string, ServiceData> = {
     ],
     removes: {
       heading: "Common Paint Problems We Fix",
-      items: ["Swirl Marks", "Minor Scratches", "Holograms", "Water Spots", "Paint Oxidation", "Surface Dullness", "Improper Wash Marks", "Light Paint Defects"],
+      items: ["Swirl Marks", "Minor Scratches", "Holograms", "Water Spots", "Paint Oxidation", "Surface Dullness"],
     },
     whyUs: [
       "Experienced Detailing Specialists",
@@ -220,8 +219,6 @@ const data: Record<string, ServiceData> = {
         "Paint Inspection Under Proper Lighting",
         "Compounding Stage",
         "Polishing Stage",
-        "Finishing Refinement",
-        "Paint Protection Application",
       ],
     },
     finishes: [
@@ -1124,6 +1121,7 @@ const allServices = [
   { name: "Luxury Car Detailing", to: "/services/luxury-car-detailing" },
   { name: "Dent Paint & Body Shop", to: "/services/dent-paint" },
   { name: "Anti Rust Coating", to: "/services/anti-rust-coating" },
+  { name: "Windshield Protection Film", to: "/services/windshield-protection" },
 ];
 
 const Service = () => {
