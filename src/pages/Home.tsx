@@ -70,6 +70,62 @@ const Bullet = ({ children }: { children: React.ReactNode }) => (
   </li>
 );
 
+const BookCTA = () => (
+  <section className="relative overflow-hidden">
+    <div className="absolute inset-0">
+      <img src={heroCar} alt="" className="h-full w-full object-cover" loading="lazy" />
+      <div className="absolute inset-0 bg-primary/85" />
+    </div>
+    <div className="relative container mx-auto py-24">
+      <div className="max-w-4xl mx-auto text-center text-primary-foreground">
+        <p className="text-xs tracking-[0.4em] uppercase text-gold mb-4">Book Premium Services</p>
+        <h2 className="font-display text-4xl md:text-5xl leading-tight">
+          Best PPF in Meerut · Ceramic Coating in Meerut · Luxury Car Detailing
+        </h2>
+        <p className="mt-6 text-primary-foreground/80 max-w-2xl mx-auto">
+          Protect your investment with professional car detailing and paint protection at CLNHYGEN.
+        </p>
+
+        <div className="mt-10 grid sm:grid-cols-3 gap-4 max-w-3xl mx-auto text-left">
+          <div className="flex items-start gap-3 rounded-xl border border-white/15 bg-white/5 p-5">
+            <MapPin className="h-5 w-5 text-gold mt-0.5 shrink-0" />
+            <div>
+              <p className="text-xs uppercase tracking-widest text-gold mb-1">Address</p>
+              <p className="text-sm">Mohkampur Industrial Area, Meerut, Uttar Pradesh</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-3 rounded-xl border border-white/15 bg-white/5 p-5">
+            <Phone className="h-5 w-5 text-gold mt-0.5 shrink-0" />
+            <div>
+              <p className="text-xs uppercase tracking-widest text-gold mb-1">Phone</p>
+              <p className="text-sm">+91 84499 00095</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-3 rounded-xl border border-white/15 bg-white/5 p-5">
+            <Globe className="h-5 w-5 text-gold mt-0.5 shrink-0" />
+            <div>
+              <p className="text-xs uppercase tracking-widest text-gold mb-1">Web</p>
+              <p className="text-sm">www.clnhygen.com</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a href="tel:+918449900095" className="inline-flex items-center gap-2 bg-gold text-primary text-sm font-semibold px-7 py-3 rounded-full hover:shadow-gold transition-smooth uppercase tracking-wide">
+            <Phone className="h-4 w-4" /> Call +91 84499 00095
+          </a>
+          <a href="https://wa.me/918449900095" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-7 py-3 rounded-full transition-colors uppercase tracking-wide">
+            <MessageCircle className="h-4 w-4" /> WhatsApp
+          </a>
+          <Link to="/contact" className="inline-flex items-center gap-2 border border-white/30 text-white text-sm font-semibold px-7 py-3 rounded-full hover:bg-white/10 transition-smooth uppercase tracking-wide">
+            Book Now <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 const Home = () => {
   return (
     <div>
@@ -175,6 +231,9 @@ const Home = () => {
         </div>
       </section>
 
+      {/* BOOK CTA — moved right after PPF section */}
+      <BookCTA />
+
       {/* SECTION 2 — Ceramic (image right) */}
       <section className="py-24 border-b border-border">
         <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
@@ -275,61 +334,6 @@ const Home = () => {
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{f.d}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* BOOK CTA */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={heroCar} alt="" className="h-full w-full object-cover" loading="lazy" />
-          <div className="absolute inset-0 bg-primary/85" />
-        </div>
-        <div className="relative container mx-auto py-24">
-          <div className="max-w-4xl mx-auto text-center text-primary-foreground">
-            <p className="text-xs tracking-[0.4em] uppercase text-gold mb-4">Book Premium Services</p>
-            <h2 className="font-display text-4xl md:text-5xl leading-tight">
-              Best PPF in Meerut · Ceramic Coating in Meerut · Luxury Car Detailing
-            </h2>
-            <p className="mt-6 text-primary-foreground/80 max-w-2xl mx-auto">
-              Protect your investment with professional car detailing and paint protection at CLNHYGEN.
-            </p>
-
-            <div className="mt-10 grid sm:grid-cols-3 gap-4 max-w-3xl mx-auto text-left">
-              <div className="flex items-start gap-3 rounded-xl border border-white/15 bg-white/5 p-5">
-                <MapPin className="h-5 w-5 text-gold mt-0.5 shrink-0" />
-                <div>
-                  <p className="text-xs uppercase tracking-widest text-gold mb-1">Address</p>
-                  <p className="text-sm">Mohkampur Industrial Area, Meerut, Uttar Pradesh</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3 rounded-xl border border-white/15 bg-white/5 p-5">
-                <Phone className="h-5 w-5 text-gold mt-0.5 shrink-0" />
-                <div>
-                  <p className="text-xs uppercase tracking-widest text-gold mb-1">Phone</p>
-                  <p className="text-sm">+91 84499 00095</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3 rounded-xl border border-white/15 bg-white/5 p-5">
-                <Globe className="h-5 w-5 text-gold mt-0.5 shrink-0" />
-                <div>
-                  <p className="text-xs uppercase tracking-widest text-gold mb-1">Web</p>
-                  <p className="text-sm">www.clnhygen.com</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
-              <a href="tel:+918449900095" className="inline-flex items-center gap-2 bg-gold text-primary text-sm font-semibold px-7 py-3 rounded-full hover:shadow-gold transition-smooth uppercase tracking-wide">
-                <Phone className="h-4 w-4" /> Call +91 84499 00095
-              </a>
-              <a href="https://wa.me/918449900095" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-7 py-3 rounded-full transition-colors uppercase tracking-wide">
-                <MessageCircle className="h-4 w-4" /> WhatsApp
-              </a>
-              <Link to="/contact" className="inline-flex items-center gap-2 border border-white/30 text-white text-sm font-semibold px-7 py-3 rounded-full hover:bg-white/10 transition-smooth uppercase tracking-wide">
-                Book Now <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
           </div>
         </div>
       </section>
