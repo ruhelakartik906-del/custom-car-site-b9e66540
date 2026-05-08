@@ -1,5 +1,5 @@
 import { useParams, Link, Navigate } from "react-router-dom";
-import { CheckCircle2, ArrowRight, Phone, MessageCircle, MapPin, BadgeCheck, Sparkles } from "lucide-react";
+import { CheckCircle2, ArrowRight, Phone, MessageCircle, MapPin, BadgeCheck, Sparkles, Shield, Droplets } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import ceramic from "@/assets/service-ceramic.jpg";
 import ppf from "@/assets/service-ppf.jpg";
@@ -16,6 +16,12 @@ type ServiceData = {
   removes?: { heading: string; items: string[] };
   whyUs: string[];
   vehicles?: string[];
+  whatIs?: { heading: string; body: string };
+  finishes?: { name: string; desc: string }[];
+  coverage?: { heading: string; items: string[] };
+  models?: string[];
+  maintenance?: string[];
+  comparison?: { heading: string; intro: string; items: string[] };
 };
 
 const data: Record<string, ServiceData> = {
@@ -25,27 +31,70 @@ const data: Record<string, ServiceData> = {
     subtitle: "Premium PPF that protects your vehicle's original paint from scratches, stone chips, road debris, swirl marks and UV damage.",
     img: ppf,
     intro:
-      "Our Paint Protection Film (PPF) services in Meerut help protect your vehicle's original paint from scratches, stone chips, road debris, swirl marks, and UV damage. We use premium-quality PPF materials and precision installation techniques to deliver seamless protection for luxury cars, SUVs, and daily-driven vehicles.",
+      "Welcome to CLNHYGEN — your trusted destination for premium Paint Protection Film (PPF) installation in Meerut. We provide high-quality PPF solutions designed to protect your car's original paint from scratches, stone chips, swirl marks, road debris, and UV damage while maintaining a flawless showroom finish. Whether you own a Fortuner, Thar, Scorpio N, BMW, Mercedes, Audi, Safari, Creta or any luxury or daily-driven vehicle — our expert team ensures precision protection with premium finishing.",
     benefits: [
       "Self-Healing Technology",
-      "High Gloss Finish",
-      "Scratch Resistance",
-      "UV Protection",
       "Hydrophobic Surface",
-      "Non-Yellowing Film",
+      "High Gloss Finish",
+      "Matte Finish Options",
+      "Non-Yellowing Material",
+      "UV Resistant Protection",
+      "Scratch Resistance",
       "Long-Term Paint Protection",
+      "Enhanced Resale Value",
     ],
     removes: {
       heading: "PPF Protects Against",
-      items: ["Stone Chips", "Minor Scratches", "Swirl Marks", "UV Damage", "Paint Fading", "Road Debris Damage"],
+      items: ["Stone Chips", "Minor Scratches", "Road Debris", "Swirl Marks", "Bird Droppings", "UV Damage", "Paint Fading", "Hard Water Spots"],
     },
     whyUs: [
-      "Expert PPF Installation Team",
+      "Experienced PPF Installation Experts",
+      "Computer Precision Cutting",
       "Bubble-Free Finish",
-      "Edge-to-Edge Coverage",
+      "Seamless Edge Finishing",
       "Premium Imported Films",
+      "Dust-Controlled Installation Environment",
       "Long Lasting Protection",
     ],
+    whatIs: {
+      heading: "What is Paint Protection Film (PPF)?",
+      body: "Paint Protection Film (PPF) is a transparent polyurethane film applied over your vehicle's painted surfaces to protect them from external damage. It acts as a strong protective layer while preserving your car's original paint quality and shine — one of the best long-term investments for maintaining your vehicle's appearance and resale value.",
+    },
+    finishes: [
+      { name: "Gloss PPF", desc: "Enhances your vehicle's shine with a deep glossy finish while providing maximum paint protection." },
+      { name: "Matte PPF", desc: "Transforms your vehicle with a premium satin matte appearance while protecting the original paint underneath." },
+    ],
+    coverage: {
+      heading: "Full Body & Partial PPF Coverage",
+      items: [
+        "Full Body PPF",
+        "Front Bumper PPF",
+        "Hood Protection Film",
+        "Door Edge Protection",
+        "Headlight PPF",
+        "Side Mirror PPF",
+        "Piano Black Interior PPF",
+      ],
+    },
+    models: ["Thar", "Fortuner", "Scorpio N", "BMW", "Mercedes-Benz", "Audi", "Defender", "Safari", "Creta", "Verna"],
+    maintenance: [
+      "Avoid harsh chemicals",
+      "Use pH-neutral car shampoo",
+      "Wash with microfiber cloths",
+      "Avoid pressure washing edges closely",
+      "Get regular detailing maintenance",
+    ],
+    comparison: {
+      heading: "Why PPF is Better than Wax or Polish",
+      intro: "Unlike traditional wax or polishing methods, Paint Protection Film provides physical impact resistance and long-term paint safety.",
+      items: [
+        "Better Scratch Protection",
+        "Long-Term Durability",
+        "UV & Chemical Resistance",
+        "Better Resale Value",
+        "Permanent Surface Protection",
+      ],
+    },
   },
   "ceramic-coating": {
     eyebrow: "Long Lasting Shine & Protection",
