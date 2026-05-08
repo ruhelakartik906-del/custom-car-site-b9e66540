@@ -22,6 +22,7 @@ type ServiceData = {
   models?: string[];
   maintenance?: string[];
   comparison?: { heading: string; intro: string; items: string[] };
+  faqs?: { q: string; a: string }[];
 };
 
 const data: Record<string, ServiceData> = {
@@ -95,6 +96,13 @@ const data: Record<string, ServiceData> = {
         "Permanent Surface Protection",
       ],
     },
+    faqs: [
+      { q: "How long does PPF last?", a: "Premium Paint Protection Film can last several years depending on maintenance and usage conditions." },
+      { q: "Does PPF protect against scratches?", a: "Yes, PPF protects against minor scratches, swirl marks, stone chips and road debris damage." },
+      { q: "Is PPF worth it for new cars?", a: "Yes, PPF helps preserve original paint quality and protects your vehicle from daily wear and tear." },
+      { q: "Which is better — Ceramic Coating or PPF?", a: "PPF provides physical impact protection, while ceramic coating mainly enhances gloss and hydrophobic performance. Many customers combine both for maximum protection." },
+      { q: "Do you provide matte and gloss PPF?", a: "Yes, CLNHYGEN offers both matte PPF and gloss PPF installation services in Meerut." },
+    ],
   },
   "ceramic-coating": {
     eyebrow: "Long Lasting Shine & Protection",
