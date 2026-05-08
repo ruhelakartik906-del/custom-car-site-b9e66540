@@ -868,6 +868,92 @@ const data: Record<string, ServiceData> = {
       { q: "Does polishing improve paint shine?", a: "Yes, professional polishing significantly improves paint gloss, reflection, and overall vehicle appearance." },
     ],
   },
+  "luxury-car-detailing": {
+    eyebrow: "Premium Auto Detailing Studio",
+    title: "Luxury Car Detailing in Meerut",
+    subtitle: "Premium automotive detailing, paint protection, ceramic coating, PPF, interior restoration, and complete vehicle enhancement for luxury and high-end vehicles.",
+    img: detailing,
+    intro:
+      "Welcome to CLNHYGEN — your trusted destination for luxury car detailing services in Meerut. We specialize in premium automotive detailing, paint protection, ceramic coating, Paint Protection Film (PPF), interior restoration, and complete vehicle enhancement solutions designed for luxury and high-end vehicles. Luxury cars require specialized care, precision detailing, and premium-grade protection solutions to maintain flawless appearance and long-term value. Our expert detailing team delivers showroom-level finish with advanced detailing techniques and world-class products.",
+    benefits: [
+      "Maintain Paint Quality",
+      "Protect Vehicle Surfaces",
+      "Preserve Luxury Appearance",
+      "Improve Driving Experience",
+      "Enhance Vehicle Resale Value",
+      "Maintain Showroom Finish",
+    ],
+    removes: {
+      heading: "Our Luxury Car Services Include",
+      items: [
+        "Paint Protection Film (PPF)",
+        "Ceramic & Graphene Coating",
+        "Paint Correction",
+        "Interior Deep Detailing",
+        "Exterior Detailing",
+        "Engine Bay Detailing",
+        "Headlight Restoration",
+        "Car Rubbing & Polishing",
+        "Dent Paint & Body Shop Services",
+      ],
+    },
+    whyUs: [
+      "Experienced Luxury Vehicle Handling",
+      "Premium Detailing Products",
+      "Advanced Paint Protection Solutions",
+      "Luxury Finishing Standards",
+      "Attention to Detail",
+      "Professional Detailing Equipment",
+      "Customized Car Care Solutions",
+    ],
+    vehicles: ["Luxury Sedans", "Premium SUVs", "Sports Cars", "Exotic Vehicles", "Performance Cars"],
+    whatIs: {
+      heading: "Professional Luxury Car Detailing Services",
+      body: "We provide specialized detailing services for luxury sedans, premium SUVs, sports cars, exotic vehicles, and performance cars. Our detailing-focused approach ensures every surface receives premium care and protection using advanced detailing techniques, premium products, and precision workmanship.",
+    },
+    finishes: [
+      { name: "Ceramic & Graphene Coating Services", desc: "We provide premium ceramic and graphene coating solutions designed to enhance paint gloss, create hydrophobic surface, protect against UV damage, reduce maintenance effort, and improve surface smoothness." },
+      { name: "Paint Correction for Luxury Vehicles", desc: "Our multi-stage paint correction process safely removes swirl marks, surface defects, oxidation, holograms, and water spots to restore mirror-like reflection and showroom-quality finish." },
+    ],
+    coverage: {
+      heading: "Premium Interior Detailing",
+      items: [
+        "Leather Cleaning & Conditioning",
+        "Seat Shampooing",
+        "Steam Sanitization",
+        "Dashboard Restoration",
+        "Odor Removal",
+        "Carpet & Floor Cleaning",
+      ],
+    },
+    models: ["BMW", "Mercedes-Benz", "Audi", "Defender", "Fortuner", "Thar", "Scorpio N", "Safari", "Jaguar", "Porsche"],
+    maintenance: [
+      "Use pH-neutral shampoo",
+      "Avoid harsh chemicals",
+      "Wash with microfiber cloths",
+      "Follow proper detailing methods",
+      "Schedule periodic maintenance washes",
+    ],
+    comparison: {
+      heading: "Why Choose CLNHYGEN for Luxury Car Detailing",
+      intro: "At CLNHYGEN, every luxury vehicle receives specialized attention using advanced detailing techniques, premium products, and precision workmanship.",
+      items: [
+        "Experienced Luxury Vehicle Handling",
+        "Premium Detailing Products",
+        "Advanced Paint Protection Solutions",
+        "Luxury Finishing Standards",
+        "Attention to Detail",
+        "Professional Detailing Equipment",
+      ],
+    },
+    faqs: [
+      { q: "Why do luxury cars need professional detailing?", a: "Luxury vehicles require specialized products, safe detailing methods, and advanced protection solutions to maintain paint quality and premium finish." },
+      { q: "Do you provide ceramic coating for luxury vehicles?", a: "Yes, CLNHYGEN provides premium ceramic and graphene coating services for luxury cars." },
+      { q: "Is PPF worth it for luxury vehicles?", a: "Yes, Paint Protection Film helps protect luxury vehicle paint from scratches, chips, and environmental damage." },
+      { q: "Do you detail luxury car interiors?", a: "Yes, we provide premium interior detailing including leather care, steam sanitization, and deep cleaning." },
+      { q: "Which luxury brands do you handle?", a: "We detail BMW, Mercedes-Benz, Audi, Defender, Jaguar, Porsche, and many other premium vehicles." },
+    ],
+  },
 };
 
 const allServices = [
@@ -882,6 +968,7 @@ const allServices = [
   { name: "Engine Bay Cleaning", to: "/services/engine-bay-detailing" },
   { name: "Alloy Wheel Detailing", to: "/services/car-detailing" },
   { name: "Car Rubbing & Polishing", to: "/services/car-rubbing-polishing" },
+  { name: "Luxury Car Detailing", to: "/services/luxury-car-detailing" },
   { name: "Dent Paint & Body Shop", to: "/services/dent-paint" },
 ];
 

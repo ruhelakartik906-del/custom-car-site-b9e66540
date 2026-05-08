@@ -9,6 +9,7 @@ const services = [
   { label: "Ceramic Coating", to: "/services/ceramic-coating" },
   { label: "Graphene Coating", to: "/services/graphene-coating" },
   { label: "Paint Protection Film (PPF)", to: "/services/ppf" },
+  { label: "Luxury Car Detailing", to: "/services/luxury-car-detailing" },
   { label: "Car Detailing", to: "/services/car-detailing" },
   { label: "Exterior Detailing", to: "/services/exterior-detailing" },
   { label: "Car Spa & Foam Wash", to: "/services/car-spa" },
