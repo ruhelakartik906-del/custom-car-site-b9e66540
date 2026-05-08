@@ -14,6 +14,7 @@ const services = [
   { label: "Paint Correction", to: "/services/paint-correction" },
   { label: "Dent Paint & Body Shop", to: "/services/dent-paint" },
   { label: "Headlight Restoration", to: "/services/headlight-restoration" },
+  { label: "Engine Bay Detailing", to: "/services/engine-bay-detailing" },
 ];
 
 const vehicles = [
