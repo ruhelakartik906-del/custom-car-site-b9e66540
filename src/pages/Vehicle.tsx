@@ -3,6 +3,14 @@ import { ArrowRight, CheckCircle2, MessageCircle, Phone, Gauge, Cog, Compass, St
 import PageHero from "@/components/PageHero";
 import scorpio from "@/assets/vehicle-scorpio.jpg";
 import fortuner from "@/assets/vehicle-fortuner.jpg";
+import scorpio1 from "@/assets/scorpio-1.jpg";
+import scorpio2 from "@/assets/scorpio-2.jpg";
+import scorpio3 from "@/assets/scorpio-3.jpg";
+import scorpio4 from "@/assets/scorpio-4.jpg";
+import fortuner1 from "@/assets/fortuner-1.jpg";
+import fortuner2 from "@/assets/fortuner-2.jpg";
+import fortuner3 from "@/assets/fortuner-3.jpg";
+import fortuner4 from "@/assets/fortuner-4.jpg";
 
 type Spec = { icon: typeof Gauge; label: string; value: string };
 type Benefit = { icon: typeof Gauge; title: string; desc: string };
@@ -17,7 +25,7 @@ const data: Record<string, VehicleData> = {
     name: "Mahindra Scorpio",
     eyebrow: "Made for the Beast",
     tagline: "Specialist detailing for the Scorpio Classic, Scorpio-N and Scorpio Z8L.",
-    img: scorpio,
+    img: scorpio1,
     about: "The Scorpio's bold cladding, large alloy faces and high-impact bonnet make it a stone-chip magnet on Indian highways. Our PPF kits are pre-cut for every Scorpio variant, and our coatings are tuned for matte, gloss and dual-tone finishes.",
     benefits: [
       { icon: Mountain, title: "Built for Tough Terrain", desc: "Body-on-frame chassis aur high ground clearance — kharab roads aur off-road trails dono ke liye perfect." },
@@ -34,7 +42,7 @@ const data: Record<string, VehicleData> = {
       { icon: Compass, label: "Drive", value: "2WD / 4WD (4XPLOR)" },
       { icon: Star, label: "Z8 L Highlights", value: "Sunroof · Dual-zone climate · ADAS-ready" },
     ],
-    gallery: [scorpio, scorpio, scorpio, scorpio],
+    gallery: [scorpio1, scorpio2, scorpio3, scorpio4],
     startingPrice: "₹ 24,999",
     ctaQuestion: "Have questions about the Scorpio-N or Classic?",
   },
@@ -42,7 +50,7 @@ const data: Record<string, VehicleData> = {
     name: "Toyota Fortuner",
     eyebrow: "King of the Highway",
     tagline: "Concours-grade detailing for the Fortuner, Legender and GR-Sport.",
-    img: fortuner,
+    img: fortuner1,
     about: "The Fortuner deserves a finish as imposing as its stance. We specialize in mirror-deep gloss for Attitude Black and Super White, with full-body PPF for owners who tour the country and refuse to compromise.",
     benefits: [
       { icon: Crown, title: "King-of-Road Presence", desc: "Imposing stance aur premium finish — Fortuner ko sabse alag aur commanding look milta hai." },
@@ -59,7 +67,7 @@ const data: Record<string, VehicleData> = {
       { icon: Compass, label: "Drive", value: "2x4 / 4x4 with Diff-Lock" },
       { icon: Star, label: "Legender Highlights", value: "LED DRLs · Powered tailgate · Premium leather" },
     ],
-    gallery: [fortuner, fortuner, fortuner, fortuner],
+    gallery: [fortuner1, fortuner2, fortuner3, fortuner4],
     startingPrice: "₹ 34,999",
     ctaQuestion: "Fortuner variants got you thinking?",
   },
