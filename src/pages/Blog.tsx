@@ -1,20 +1,7 @@
 import { Link } from "react-router-dom";
-import { MapPin, ArrowRight, CheckCircle2, Sparkles, ShieldCheck, Car, Gem, BookOpen } from "lucide-react";
+import { ArrowRight, CheckCircle2, Sparkles, ShieldCheck, Gem, BookOpen } from "lucide-react";
 import PageHero from "@/components/PageHero";
-import detailing from "@/assets/service-detailing.jpg";
 import ppfImage from "@/assets/service-ppf.jpg";
-
-type Section = { title: string; items: string[] };
-type Post = {
-  slug: string;
-  city: string;
-  title: string;
-  intro: string[];
-  services: Section[];
-  whyChoose: string[];
-  benefits: string[];
-  closing: { search: string; book: string };
-};
 
 type Article = {
   slug: string;
