@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowLeft, CheckCircle2, Sparkles, ShieldCheck, Gem, BookOpen, Car } from "lucide-react";
+import { ArrowRight, ArrowLeft, CheckCircle2, Sparkles, ShieldCheck, Gem, BookOpen, Car, Timer, AlertTriangle, Wrench } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import ppfHero from "@/assets/blog-ppf.jpg";
 import ppfVsCeramicHero from "@/assets/blog-ppf-vs-ceramic.jpg";
+import ppfLifespanHero from "@/assets/blog-ppf-lifespan.jpg";
 
 type Article = {
   slug: string;
@@ -29,6 +30,14 @@ const articles: Article[] = [
     excerpt:
       "Two solutions dominate the automotive detailing industry. Compare features, benefits and find the best paint protection for your vehicle.",
     image: ppfVsCeramicHero,
+  },
+  {
+    slug: "how-long-does-paint-protection-film-last",
+    category: "Paint Protection",
+    title: "How Long Does Paint Protection Film Last?",
+    excerpt:
+      "One of the most common questions car owners ask before investing in PPF is: How long does Paint Protection Film last? Explore lifespan, factors, and care tips.",
+    image: ppfLifespanHero,
   },
 ];
 
@@ -388,6 +397,268 @@ const PpfVsCeramicArticle = () => (
   </>
 );
 
+const PpfLifespanArticle = () => (
+  <>
+    <div className="flex items-center gap-2 text-xs tracking-[0.4em] uppercase text-gold mb-4">
+      <BookOpen className="h-4 w-4" /> Paint Protection
+    </div>
+    <h2 className="font-display text-4xl md:text-5xl">
+      How Long Does Paint Protection Film Last?
+    </h2>
+    <div className="mt-4 h-px w-20 gold-divider" />
+
+    <div className="mt-8 grid lg:grid-cols-3 gap-10">
+      <div className="lg:col-span-2 space-y-5">
+        <p className="text-muted-foreground leading-relaxed">
+          Paint Protection Film (PPF) has become one of the most popular solutions for protecting a vehicle's paint from scratches, stone chips, road debris, and environmental damage. However, one of the most common questions car owners ask before investing in PPF is: How long does Paint Protection Film last?
+        </p>
+        <p className="text-muted-foreground leading-relaxed">
+          The answer depends on several factors, including film quality, installation standards, driving conditions, and maintenance. In this guide, we'll explore the average PPF lifespan, what affects its durability, and how modern self-healing PPF technology helps extend its performance.
+        </p>
+      </div>
+      <div className="aspect-[4/3] overflow-hidden rounded-sm shadow-elegant">
+        <img src={ppfLifespanHero} alt="How Long Does PPF Last — CLNHYGEN" loading="lazy" className="h-full w-full object-cover" />
+      </div>
+    </div>
+
+    <div className="mt-14">
+      <h3 className="font-display text-3xl flex items-center gap-3">
+        <Timer className="h-6 w-6 text-gold" /> What Is the Average PPF Lifespan?
+      </h3>
+      <div className="mt-6 space-y-5">
+        <p className="text-muted-foreground leading-relaxed">
+          Most premium Paint Protection Films available today last between 5 to 10 years. High-quality films from leading manufacturers are designed to withstand harsh weather conditions, UV exposure, road debris, and everyday wear and tear while maintaining their clarity and protective properties.
+        </p>
+        <p className="text-muted-foreground leading-relaxed font-medium">General lifespan estimates:</p>
+        <div className="grid sm:grid-cols-3 gap-4 mt-4">
+          <div className="bg-card border border-border p-6 rounded-sm">
+            <h4 className="font-display text-xl">Entry-Level PPF</h4>
+            <p className="mt-2 text-muted-foreground">3–5 years</p>
+          </div>
+          <div className="bg-card border border-border p-6 rounded-sm">
+            <h4 className="font-display text-xl">Mid-Range PPF</h4>
+            <p className="mt-2 text-muted-foreground">5–7 years</p>
+          </div>
+          <div className="bg-card border border-border p-6 rounded-sm">
+            <h4 className="font-display text-xl">Premium Self-Healing PPF</h4>
+            <p className="mt-2 text-muted-foreground">7–10 years or more</p>
+          </div>
+        </div>
+        <p className="text-muted-foreground leading-relaxed">
+          Many premium brands also offer warranties that cover yellowing, cracking, peeling, and other manufacturing defects.
+        </p>
+      </div>
+    </div>
+
+    <div className="mt-14">
+      <h3 className="font-display text-3xl flex items-center gap-3">
+        <Sparkles className="h-6 w-6 text-gold" /> What Is Self-Healing PPF?
+      </h3>
+      <div className="mt-6 space-y-5">
+        <p className="text-muted-foreground leading-relaxed">
+          One of the biggest advancements in Paint Protection Film technology is self-healing PPF.
+        </p>
+        <p className="text-muted-foreground leading-relaxed">
+          Self-healing films feature a specialized top layer that can automatically repair minor scratches, swirl marks, and light abrasions when exposed to heat from sunlight, warm water, or engine heat.
+        </p>
+        <p className="text-muted-foreground leading-relaxed">
+          This technology helps keep the film looking smooth and clear for years, significantly improving the overall PPF lifespan.
+        </p>
+      </div>
+    </div>
+
+    <div className="mt-14">
+      <h3 className="font-display text-3xl flex items-center gap-3">
+        <Gem className="h-6 w-6 text-gold" /> How Self-Healing Technology Works
+      </h3>
+      <div className="mt-6 space-y-5">
+        <p className="text-muted-foreground leading-relaxed">
+          When small surface scratches occur, the elastomeric top coat softens under heat and returns to its original shape, effectively making the scratches disappear.
+        </p>
+        <p className="text-muted-foreground leading-relaxed font-medium">Benefits include:</p>
+        <ul className="mt-4 space-y-2">
+          <Bullet>Reduced visible swirl marks</Bullet>
+          <Bullet>Better long-term appearance</Bullet>
+          <Bullet>Lower maintenance requirements</Bullet>
+          <Bullet>Extended film life</Bullet>
+          <Bullet>Improved resale value</Bullet>
+        </ul>
+      </div>
+    </div>
+
+    <div className="mt-14">
+      <h3 className="font-display text-3xl flex items-center gap-3">
+        <ShieldCheck className="h-6 w-6 text-gold" /> Factors That Affect PPF Lifespan
+      </h3>
+      <div className="mt-8 space-y-6">
+        <div className="bg-card border border-border p-6 rounded-sm">
+          <h4 className="font-display text-xl">1. Film Quality</h4>
+          <p className="mt-3 text-muted-foreground leading-relaxed">
+            Not all Paint Protection Films are created equal. Premium TPU (Thermoplastic Polyurethane) films generally last much longer than low-cost alternatives.
+          </p>
+          <p className="mt-3 text-muted-foreground leading-relaxed font-medium">High-quality films offer:</p>
+          <ul className="mt-3 space-y-2">
+            <Bullet>Better UV resistance</Bullet>
+            <Bullet>Stronger adhesive technology</Bullet>
+            <Bullet>Superior self-healing capabilities</Bullet>
+            <Bullet>Improved stain resistance</Bullet>
+          </ul>
+        </div>
+
+        <div className="bg-card border border-border p-6 rounded-sm">
+          <h4 className="font-display text-xl">2. Installation Quality</h4>
+          <p className="mt-3 text-muted-foreground leading-relaxed">
+            Professional installation plays a major role in determining how long your PPF lasts.
+          </p>
+          <p className="mt-3 text-muted-foreground leading-relaxed font-medium">Poor installation can lead to:</p>
+          <ul className="mt-3 space-y-2">
+            <Bullet>Edge lifting</Bullet>
+            <Bullet>Air bubbles</Bullet>
+            <Bullet>Contamination under the film</Bullet>
+            <Bullet>Premature peeling</Bullet>
+          </ul>
+          <p className="mt-3 text-muted-foreground leading-relaxed">
+            Choosing experienced installers ensures maximum durability and performance.
+          </p>
+        </div>
+
+        <div className="bg-card border border-border p-6 rounded-sm">
+          <h4 className="font-display text-xl">3. Climate and Weather Conditions</h4>
+          <p className="mt-3 text-muted-foreground leading-relaxed">
+            Vehicles exposed to extreme environmental conditions may experience faster wear.
+          </p>
+          <p className="mt-3 text-muted-foreground leading-relaxed font-medium">Factors include:</p>
+          <ul className="mt-3 space-y-2">
+            <Bullet>Intense sunlight and UV exposure</Bullet>
+            <Bullet>Heavy rainfall</Bullet>
+            <Bullet>Dust storms</Bullet>
+            <Bullet>Industrial pollution</Bullet>
+            <Bullet>Coastal salt exposure</Bullet>
+          </ul>
+          <p className="mt-3 text-muted-foreground leading-relaxed">
+            Fortunately, premium self-healing PPF is specifically engineered to handle these challenges.
+          </p>
+        </div>
+
+        <div className="bg-card border border-border p-6 rounded-sm">
+          <h4 className="font-display text-xl">4. Driving Habits</h4>
+          <p className="mt-3 text-muted-foreground leading-relaxed">
+            Highway driving exposes vehicles to more stone chips and road debris compared to city driving. Frequent long-distance travel can increase wear on the film over time.
+          </p>
+          <p className="mt-3 text-muted-foreground leading-relaxed">
+            However, PPF is designed to absorb these impacts and protect the original paint underneath.
+          </p>
+        </div>
+
+        <div className="bg-card border border-border p-6 rounded-sm">
+          <h4 className="font-display text-xl">5. Maintenance Practices</h4>
+          <p className="mt-3 text-muted-foreground leading-relaxed">
+            Proper maintenance significantly extends the lifespan of Paint Protection Film.
+          </p>
+          <p className="mt-3 text-muted-foreground leading-relaxed font-medium">Recommended practices:</p>
+          <ul className="mt-3 space-y-2">
+            <Bullet>Regular washing</Bullet>
+            <Bullet>Using pH-neutral car shampoos</Bullet>
+            <Bullet>Removing bird droppings quickly</Bullet>
+            <Bullet>Avoiding harsh chemicals</Bullet>
+            <Bullet>Following manufacturer care instructions</Bullet>
+          </ul>
+          <p className="mt-3 text-muted-foreground leading-relaxed">
+            Well-maintained PPF often lasts beyond its expected lifespan.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div className="mt-14">
+      <h3 className="font-display text-3xl flex items-center gap-3">
+        <AlertTriangle className="h-6 w-6 text-gold" /> Signs That Your PPF Needs Replacement
+      </h3>
+      <p className="mt-4 text-muted-foreground leading-relaxed">
+        Even the best Paint Protection Film will eventually reach the end of its service life.
+      </p>
+      <p className="mt-4 text-muted-foreground leading-relaxed font-medium">Common signs include:</p>
+      <div className="mt-6 grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {["Yellowing or discoloration","Cracking","Peeling edges","Reduced clarity","Permanent stains","Loss of self-healing performance"].map((sign) => (
+          <div key={sign} className="flex items-center gap-3 bg-card border border-border p-4 rounded-sm">
+            <CheckCircle2 className="h-4 w-4 text-gold shrink-0" />
+            <span className="text-muted-foreground text-sm">{sign}</span>
+          </div>
+        ))}
+      </div>
+      <p className="mt-6 text-muted-foreground leading-relaxed">
+        When these signs appear, replacing the film ensures continued paint protection.
+      </p>
+    </div>
+
+    <div className="mt-14">
+      <h3 className="font-display text-3xl flex items-center gap-3">
+        <ShieldCheck className="h-6 w-6 text-gold" /> Can PPF Damage Your Car's Paint?
+      </h3>
+      <div className="mt-6 space-y-5">
+        <p className="text-muted-foreground leading-relaxed">
+          A professionally installed and properly removed PPF does not damage factory paint. In fact, it preserves the original finish by shielding it from daily hazards.
+        </p>
+        <p className="text-muted-foreground leading-relaxed">
+          Many car owners are surprised to find that after several years, the paint beneath the film often looks nearly identical to the day it was installed.
+        </p>
+      </div>
+    </div>
+
+    <div className="mt-14">
+      <h3 className="font-display text-3xl flex items-center gap-3">
+        <Wrench className="h-6 w-6 text-gold" /> How to Maximize PPF Lifespan
+      </h3>
+      <p className="mt-4 text-muted-foreground leading-relaxed">
+        To get the most out of your investment:
+      </p>
+      <ul className="mt-6 grid gap-3">
+        <Bullet>Choose premium self-healing PPF.</Bullet>
+        <Bullet>Have it installed by trained professionals.</Bullet>
+        <Bullet>Wash your vehicle regularly.</Bullet>
+        <Bullet>Avoid automatic brush car washes.</Bullet>
+        <Bullet>Remove contaminants promptly.</Bullet>
+        <Bullet>Follow recommended maintenance guidelines.</Bullet>
+      </ul>
+      <p className="mt-6 text-muted-foreground leading-relaxed">
+        These simple steps can help your Paint Protection Film perform at its best for many years.
+      </p>
+    </div>
+
+    <div className="mt-14">
+      <h3 className="font-display text-3xl flex items-center gap-3">
+        <Gem className="h-6 w-6 text-gold" /> Is PPF Worth It for Long-Term Protection?
+      </h3>
+      <div className="mt-6 space-y-5">
+        <p className="text-muted-foreground leading-relaxed">
+          Considering the rising costs of paint correction and repainting, Paint Protection Film offers excellent long-term value. A quality PPF installation can protect your vehicle's finish for up to a decade while preserving its appearance and resale value.
+        </p>
+        <p className="text-muted-foreground leading-relaxed">
+          For owners who want maximum paint protection and minimal cosmetic damage, modern self-healing PPF remains one of the most effective solutions available.
+        </p>
+      </div>
+    </div>
+
+    <div className="mt-14 bg-card border border-border p-8 rounded-sm">
+      <h3 className="font-display text-2xl">Final Thoughts</h3>
+      <p className="mt-6 text-muted-foreground leading-relaxed">
+        The average PPF lifespan ranges from 5 to 10 years, depending on the quality of the film, installation, maintenance, and driving conditions. Premium self-healing PPF provides the longest-lasting protection by automatically repairing minor scratches and maintaining a clear, glossy finish.
+      </p>
+      <p className="mt-4 text-muted-foreground leading-relaxed">
+        If you're looking for a reliable way to keep your vehicle's paint protected and looking new for years, Paint Protection Film is a smart investment that continues to deliver value long after installation.
+      </p>
+      <div className="mt-6 flex flex-wrap gap-4">
+        <Link to="/contact" className="inline-flex items-center gap-2 bg-gold text-background px-7 py-3 rounded-sm font-medium hover:opacity-90 transition">
+          Book PPF Consultation <ArrowRight className="h-4 w-4" />
+        </Link>
+        <Link to="/services" className="inline-flex items-center gap-2 border border-border px-7 py-3 rounded-sm font-medium hover:border-gold transition">
+          Explore Services
+        </Link>
+      </div>
+    </div>
+  </>
+);
+
 const Blog = () => {
   const [active, setActive] = useState<string | null>(null);
   const current = articles.find((a) => a.slug === active);
@@ -409,6 +680,7 @@ const Blog = () => {
             </button>
             {current.slug === "what-is-paint-protection-film-ppf-worth-it-2026" && <PpfArticle />}
             {current.slug === "ppf-vs-ceramic-coating-which-is-better" && <PpfVsCeramicArticle />}
+            {current.slug === "how-long-does-paint-protection-film-last" && <PpfLifespanArticle />}
           </div>
         </section>
       </div>
