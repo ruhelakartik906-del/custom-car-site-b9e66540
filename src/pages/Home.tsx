@@ -18,6 +18,11 @@ import {
   Cog,
   Users,
   Heart,
+  Layers,
+  Sun,
+  Lightbulb,
+  Target,
+  Eye,
 } from "lucide-react";
 import HeroSlider from "@/components/HeroSlider";
 import heroCar from "@/assets/hero-car.jpg";
@@ -27,40 +32,82 @@ import detailing from "@/assets/service-detailing.jpg";
 import paint from "@/assets/service-paint.jpg";
 
 const brands = [
-  "Fortuner",
-  "Thar",
-  "Scorpio N",
-  "BMW",
-  "Mercedes",
-  "Audi",
-  "Safari",
-  "Creta",
-  "Defender",
-  "Range Rover",
+  "Luxury Vehicles",
+  "Sports Cars",
+  "Supercars",
+  "SUVs",
+  "Electric Vehicles",
+  "Performance Cars",
+  "Motorcycles",
+  "Commercial Fleets",
+  "Collector Vehicles",
 ];
 
 const services = [
-  { title: "Paint Protection Film", desc: "Self-healing transparent armor against stone-chips, swirls and abrasion.", img: ppf, to: "/services/ppf", Icon: Shield },
-  { title: "Ceramic Coating", desc: "9H hydrophobic glass shield with deep mirror gloss and long-term protection.", img: ceramic, to: "/services/ceramic-coating", Icon: Sparkles },
-  { title: "Graphene Coating", desc: "Next-gen graphene-infused coating for superior hardness and slickness.", img: ceramic, to: "/services/graphene-coating", Icon: Gem },
-  { title: "Paint Correction", desc: "Multi-stage compounding to remove swirls, holograms and oxidation.", img: paint, to: "/services/paint-correction", Icon: Award },
-  { title: "Interior Detailing", desc: "Steam sanitization, leather conditioning and deep cabin restoration.", img: detailing, to: "/services/interior-detailing", Icon: Droplets },
-  { title: "Alloy Wheel Detailing", desc: "Brake-dust removal, polishing and premium wheel protection.", img: paint, to: "/services/alloy-wheel-detailing", Icon: Disc3 },
+  { title: "Paint Protection Film (PPF)", desc: "Self-healing transparent armor against stone chips, scratches, road debris and environmental damage.", img: ppf, to: "/services/ppf", Icon: Shield },
+  { title: "Ceramic Coating", desc: "Nano-protective layer delivering deep gloss, hydrophobic beading and long-term paint preservation.", img: ceramic, to: "/services/ceramic-coating", Icon: Sparkles },
+  { title: "Paint Correction", desc: "Multi-stage correction removing swirls, holograms and oxidation to restore depth and clarity.", img: paint, to: "/services/paint-correction", Icon: Award },
+  { title: "Interior Detailing", desc: "Deep cleaning, sanitization, leather care and fabric protection for a cleaner cabin.", img: detailing, to: "/services/car-detailing", Icon: Droplets },
+  { title: "Surface Protection Solutions", desc: "Specialized protection for glass, headlights, wheels, trim and other high-impact surfaces.", img: paint, to: "/services/ppf", Icon: Layers },
+  { title: "Alloy Wheel Detailing", desc: "Brake-dust removal, polishing and premium wheel coating for a lasting factory finish.", img: paint, to: "/services/alloy-wheel-detailing", Icon: Disc3 },
 ];
 
-const ppfPrevents = ["Stone Chips", "Minor Scratches", "Swirl Marks", "UV Damage", "Paint Fading", "Road Debris Damage"];
-const ppfBenefits = ["Self-Healing Technology", "High Gloss Finish", "Hydrophobic Surface", "Non-Yellowing Material", "Long-Term Paint Protection", "Enhanced Resale Value"];
-const ceramicBenefits = ["Deep Mirror Gloss Finish", "Hydrophobic Water Beading", "UV & Oxidation Protection", "Easy Car Maintenance", "Enhanced Paint Depth & Shine", "Long-Lasting Protection"];
-const correctionRemoves = ["Swirl Marks", "Minor Scratches", "Holograms", "Water Spot Marks", "Paint Oxidation", "Surface Imperfections"];
-const interiorIncludes = ["Deep Vacuum Cleaning", "Seat Shampooing", "Leather Conditioning", "Dashboard Polishing", "Steam Sanitization", "Odor Removal"];
+const ppfPrevents = ["Stone Chips", "Scratches", "Bug Stains", "Bird Droppings", "Road Debris", "UV Damage"];
+const ppfBenefits = ["Self-Healing Technology", "High-Gloss & Matte Options", "UV Resistance", "Exceptional Clarity", "Long-Lasting Durability", "Easy Maintenance"];
+const ceramicBenefits = ["Deep Gloss Enhancement", "Hydrophobic Water Beading", "UV Protection", "Chemical Resistance", "Easier Vehicle Cleaning", "Long-Term Paint Preservation"];
+const correctionRemoves = ["Swirl Marks", "Light Scratches", "Holograms", "Oxidation", "Paint Imperfections", "Surface Hazing"];
+const interiorIncludes = ["Leather Treatment", "Fabric Cleaning", "Dashboard Restoration", "Interior Sanitization", "Odor Removal", "Surface Conditioning"];
 
 const whyUs = [
-  { Icon: Gem, t: "Premium Quality Products", d: "Trusted professional-grade detailing products and advanced coating technologies." },
-  { Icon: Users, t: "Skilled Professionals", d: "Trained detailing experts who handle every vehicle with precision and care." },
-  { Icon: Award, t: "Luxury Car Care Experience", d: "From hatchbacks to luxury SUVs and sports cars — premium service for every car." },
-  { Icon: Heart, t: "Customer Satisfaction Focused", d: "Quality workmanship, long-lasting protection and exceptional customer experience." },
-  { Icon: Shield, t: "Advanced Protection", d: "Industry-leading PPF, ceramic and graphene solutions for maximum defence." },
-  { Icon: Sparkles, t: "Showroom Finish", d: "Meticulous attention to detail that delivers mirror-like gloss every time." },
+  { Icon: Gem, t: "Industry-Leading Products", d: "Globally recognized products and technologies built for superior protection, performance and durability." },
+  { Icon: Users, t: "Skilled Professionals", d: "Specialists who follow proven installation and detailing procedures for consistent, exceptional results." },
+  { Icon: Cog, t: "Advanced Technology", d: "We continuously adopt the latest innovations in automotive protection and detailing." },
+  { Icon: Award, t: "Quality Assurance", d: "Strict quality standards on every vehicle and every product for total customer satisfaction." },
+  { Icon: Heart, t: "Customer-Focused Approach", d: "Long-term relationships built on transparency, professionalism and attention to detail." },
+  { Icon: Globe, t: "Global Standards", d: "International best practices in automotive detailing, paint protection and vehicle preservation." },
+];
+
+const partners = [
+  { name: "STEK", desc: "World leader in Paint Protection Film with advanced self-healing technology and superior optical clarity." },
+  { name: "CARPRO", desc: "Globally respected leader in ceramic coating technology — long-lasting protection and outstanding gloss." },
+  { name: "AUOKROM", desc: "Advanced automotive protection technologies for enhanced durability and long-term vehicle preservation." },
+  { name: "Saint-Gobain", desc: "Internationally recognized expertise in advanced materials and automotive protection technologies." },
+];
+
+const lakeCountryProducts = [
+  "HDO Pads",
+  "CCS Pads",
+  "Foam Cutting Pads",
+  "Foam Polishing Pads",
+  "Finishing Pads",
+  "Microfiber Cutting Pads",
+  "Microfiber Polishing Pads",
+  "Wool Pads",
+  "Hybrid Wool Pads",
+  "Detailing Accessories",
+];
+
+const faqs = [
+  {
+    q: "What is Paint Protection Film (PPF)?",
+    a: "Paint Protection Film is a transparent protective layer applied to painted surfaces to help prevent scratches, stone chips, stains and environmental damage.",
+  },
+  {
+    q: "How long does ceramic coating last?",
+    a: "The lifespan depends on maintenance, environmental conditions and the coating system used. Professional-grade coatings can provide protection for several years.",
+  },
+  {
+    q: "Is paint correction necessary before ceramic coating?",
+    a: "Yes. Paint correction removes imperfections and prepares the surface for optimal coating performance and durability.",
+  },
+  {
+    q: "Can PPF and ceramic coating be installed together?",
+    a: "Absolutely. Combining PPF and ceramic coating provides maximum protection, gloss enhancement and easier maintenance.",
+  },
+  {
+    q: "Why choose Lake Country pads?",
+    a: "Lake Country pads are trusted worldwide for their durability, cutting efficiency, polishing performance and consistent results across all detailing applications.",
+  },
 ];
 
 const Bullet = ({ children }: { children: React.ReactNode }) => (
@@ -134,20 +181,20 @@ const Home = () => {
       {/* INTRO */}
       <section className="py-20 border-b border-border">
         <div className="container mx-auto max-w-5xl text-center">
-          <p className="text-xs tracking-[0.4em] uppercase text-gold mb-4">CLNHYGEN · Meerut</p>
+          <p className="text-xs tracking-[0.4em] uppercase text-gold mb-4">CLNHYGEN · Protect · Enhance · Preserve</p>
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl leading-tight">
-            CLNHYGEN — Premium Car Detailing <span className="text-gold">Services in Meerut</span>
+            Global Automotive Protection, Detailing & <span className="text-gold">Surface Care Solutions</span>
           </h1>
           <div className="mt-6 mx-auto h-px w-24 gold-divider" />
           <p className="mt-7 text-muted-foreground leading-relaxed text-base md:text-lg">
-            Welcome to <strong className="text-foreground">CLNHYGEN</strong> — the trusted destination for premium car
-            detailing in Meerut. We specialize in <strong className="text-foreground">Paint Protection Film (PPF)</strong>,
-            <strong className="text-foreground"> ceramic coating</strong>, paint correction, interior detailing and luxury
-            car care solutions designed to keep your vehicle protected, glossy and showroom-ready.
+            At <strong className="text-foreground">CLNHYGEN</strong>, we deliver world-class automotive protection and
+            detailing solutions that help vehicle owners maintain the beauty, performance and value of their investments.
+            Built on quality, innovation and precision craftsmanship, CLNHYGEN is a trusted name for premium vehicle
+            protection, paint enhancement and professional automotive care products.
           </p>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            Whether you own a Fortuner, Thar, Scorpio N, BMW, Mercedes, Audi, Safari, Creta — or any luxury or daily-driven
-            vehicle — our expert team delivers unmatched finishing, deep protection and premium detailing results.
+            From luxury car owners and collectors to detailing professionals and businesses worldwide — we combine advanced
+            technology, industry-leading products and expert workmanship to deliver excellence without compromise.
           </p>
         </div>
 
@@ -204,14 +251,15 @@ const Home = () => {
       <section className="py-24 border-b border-border bg-secondary/20">
         <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <div className="overflow-hidden rounded-[20px] shadow-elegant order-2 lg:order-1">
-            <img src={ppf} alt="Paint Protection Film in Meerut" loading="lazy" className="h-full w-full object-cover" />
+            <img src={ppf} alt="Paint Protection Film" loading="lazy" className="h-full w-full object-cover" />
           </div>
           <div className="order-1 lg:order-2">
             <p className="text-xs tracking-[0.4em] uppercase text-gold mb-3">Section 01 · Invisible Armor</p>
-            <h2 className="font-display text-4xl md:text-5xl leading-tight">Paint Protection Film (PPF) in Meerut</h2>
+            <h2 className="font-display text-4xl md:text-5xl leading-tight">Paint Protection Film (PPF)</h2>
             <p className="mt-5 text-muted-foreground leading-relaxed">
-              Protect your car's original paint with premium Paint Protection Film — engineered for long-term defence
-              against everyday road hazards and harsh environmental damage.
+              An advanced protective barrier against stone chips, scratches, road debris, bug stains, bird droppings and
+              environmental damage. With self-healing technology and exceptional clarity, PPF maintains your vehicle's
+              original appearance while reducing long-term paint damage.
             </p>
 
             <h3 className="mt-8 font-display text-lg">What it Prevents</h3>
@@ -239,11 +287,11 @@ const Home = () => {
         <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-xs tracking-[0.4em] uppercase text-gold mb-3">Section 02 · Liquid Glass</p>
-            <h2 className="font-display text-4xl md:text-5xl leading-tight">Ceramic Coating Experts in Meerut</h2>
+            <h2 className="font-display text-4xl md:text-5xl leading-tight">Professional Ceramic Coating</h2>
             <p className="mt-5 text-muted-foreground leading-relaxed">
-              Our premium ceramic coatings deliver a <strong className="text-foreground">deep mirror gloss</strong>,
-              superior <strong className="text-foreground">water repellency</strong> and long-lasting protection against
-              dirt, UV rays and environmental contamination.
+              A durable <strong className="text-foreground">nano-protective layer</strong> that bonds with your vehicle's
+              paintwork — enhancing gloss, improving <strong className="text-foreground">hydrophobic</strong> properties,
+              resisting contaminants and simplifying maintenance while preserving appearance.
             </p>
 
             <ul className="mt-7 grid sm:grid-cols-2 gap-x-6 gap-y-2">
@@ -251,7 +299,7 @@ const Home = () => {
             </ul>
 
             <p className="mt-6 text-sm text-muted-foreground">
-              We use high-quality ceramic and graphene coating products for maximum durability and performance.
+              Powered by globally trusted ceramic and graphene products for maximum durability and performance.
             </p>
 
             <Link to="/services/ceramic-coating" className="mt-8 inline-flex items-center gap-2 px-6 py-3 bg-gold text-primary rounded-full text-sm font-semibold tracking-wide uppercase hover:shadow-gold transition-smooth">
@@ -259,7 +307,7 @@ const Home = () => {
             </Link>
           </div>
           <div className="overflow-hidden rounded-[20px] shadow-elegant">
-            <img src={ceramic} alt="Ceramic Coating in Meerut" loading="lazy" className="h-full w-full object-cover" />
+            <img src={ceramic} alt="Ceramic Coating" loading="lazy" className="h-full w-full object-cover" />
           </div>
         </div>
       </section>
@@ -275,15 +323,15 @@ const Home = () => {
 
           <div className="grid lg:grid-cols-2 gap-8">
             <div className="rounded-2xl border border-border bg-card overflow-hidden shadow-sm">
-              <img src={paint} alt="Paint Correction Meerut" loading="lazy" className="w-full aspect-[16/9] object-cover" />
+              <img src={paint} alt="Paint Correction" loading="lazy" className="w-full aspect-[16/9] object-cover" />
               <div className="p-8">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="h-10 w-10 grid place-items-center rounded-full bg-gold/10"><Wrench className="h-5 w-5 text-gold" /></div>
                   <h3 className="font-display text-2xl">Paint Correction</h3>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-5">
-                  Advanced machine polishing that erases swirl marks and restores a flawless
-                  <strong className="text-foreground"> showroom finish</strong> to your paintwork.
+                  Multi-stage correction that eliminates swirl marks, oxidation, light scratches and holograms — reviving
+                  the finish and preparing the surface for <strong className="text-foreground">optimal coating performance</strong>.
                 </p>
                 <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2">
                   {correctionRemoves.map((p) => <Bullet key={p}>{p}</Bullet>)}
@@ -292,22 +340,114 @@ const Home = () => {
             </div>
 
             <div className="rounded-2xl border border-border bg-card overflow-hidden shadow-sm">
-              <img src={detailing} alt="Interior Detailing Meerut" loading="lazy" className="w-full aspect-[16/9] object-cover" />
+              <img src={detailing} alt="Interior Detailing" loading="lazy" className="w-full aspect-[16/9] object-cover" />
               <div className="p-8">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="h-10 w-10 grid place-items-center rounded-full bg-gold/10"><SprayCan className="h-5 w-5 text-gold" /></div>
                   <h3 className="font-display text-2xl">Interior Detailing</h3>
                 </div>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-5">
-                  Deep <strong className="text-foreground">steam sanitization</strong>, premium
-                  <strong className="text-foreground"> leather conditioning</strong> and full cabin restoration for a
-                  cleaner, healthier, luxury feel.
+                  Deep cleaning, sanitization, <strong className="text-foreground">leather care</strong> and fabric
+                  protection — a cleaner, healthier, more comfortable driving environment.
                 </p>
                 <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2">
                   {interiorIncludes.map((p) => <Bullet key={p}>{p}</Bullet>)}
                 </ul>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SURFACE PROTECTION */}
+      <section className="py-24 border-b border-border">
+        <div className="container mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-xs tracking-[0.4em] uppercase text-gold mb-3">Section 04 · Surface Care</p>
+            <h2 className="font-display text-4xl md:text-5xl">Surface Protection Solutions</h2>
+            <div className="mt-6 h-px w-20 gold-divider mx-auto" />
+            <p className="mt-6 max-w-2xl mx-auto text-muted-foreground">
+              Specialized protection systems for every critical surface — designed for glass, trim, wheels, headlights
+              and other high-impact areas.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { Icon: Eye, t: "Windshield Protection" },
+              { Icon: Lightbulb, t: "Headlight Protection" },
+              { Icon: Disc3, t: "Wheel Protection" },
+              { Icon: Layers, t: "Trim Protection" },
+              { Icon: Sun, t: "Glass Coating" },
+              { Icon: Shield, t: "Surface Preservation" },
+            ].map((s) => (
+              <div key={s.t} className="rounded-2xl border border-border bg-card p-7 flex items-start gap-4 hover:border-gold transition-smooth">
+                <div className="h-12 w-12 shrink-0 grid place-items-center rounded-full bg-gold/10">
+                  <s.Icon className="h-5 w-5 text-gold" />
+                </div>
+                <div>
+                  <h3 className="font-display text-lg">{s.t}</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">Engineered protection for long-term preservation.</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* GLOBAL BRANDS */}
+      <section className="py-24 border-b border-border bg-secondary/20">
+        <div className="container mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-xs tracking-[0.4em] uppercase text-gold mb-3">Trusted Partners</p>
+            <h2 className="font-display text-4xl md:text-5xl">Global Brands We Trust</h2>
+            <div className="mt-6 h-px w-20 gold-divider mx-auto" />
+            <p className="mt-6 max-w-2xl mx-auto text-muted-foreground">
+              Exceptional results require exceptional products. CLNHYGEN partners with globally recognized manufacturers
+              known for quality, innovation and performance.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {partners.map((p) => (
+              <div key={p.name} className="rounded-2xl border border-border bg-card p-7 hover:border-gold hover:-translate-y-1 transition-all">
+                <div className="h-12 w-12 grid place-items-center rounded-full bg-gradient-gold mb-5">
+                  <Award className="h-5 w-5 text-primary-foreground" />
+                </div>
+                <h3 className="font-display text-2xl">{p.name}</h3>
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* LAKE COUNTRY DISTRIBUTOR */}
+      <section className="py-24 border-b border-border">
+        <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="text-xs tracking-[0.4em] uppercase text-gold mb-3">Authorized Distributor</p>
+            <h2 className="font-display text-4xl md:text-5xl leading-tight">
+              Lake Country <span className="text-gold">Manufacturing</span>
+            </h2>
+            <p className="mt-5 text-muted-foreground leading-relaxed">
+              CLNHYGEN proudly serves as a distributor of <strong className="text-foreground">Lake Country
+              Manufacturing</strong> — one of the most respected names in professional automotive detailing. For
+              decades, Lake Country has supplied innovative polishing solutions to detailers, body shops and
+              manufacturers worldwide.
+            </p>
+            <p className="mt-4 text-sm text-muted-foreground">
+              We provide genuine Lake Country products supported by expert guidance and professional industry knowledge.
+            </p>
+            <Link to="/contact" className="mt-8 inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full text-sm font-semibold tracking-wide uppercase hover:shadow-elegant transition-smooth">
+              Enquire Products <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <div className="rounded-2xl border border-border bg-card p-8 shadow-elegant">
+            <h3 className="font-display text-xl mb-5">Available Product Range</h3>
+            <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+              {lakeCountryProducts.map((p) => <Bullet key={p}>Lake Country {p}</Bullet>)}
+            </ul>
           </div>
         </div>
       </section>
@@ -320,7 +460,7 @@ const Home = () => {
             <h2 className="font-display text-4xl md:text-5xl">Why Choose CLNHYGEN</h2>
             <div className="mt-6 h-px w-20 gold-divider mx-auto" />
             <p className="mt-6 max-w-2xl mx-auto text-muted-foreground">
-              One of the most trusted detailing studios in Meerut for PPF, ceramic coating and luxury car care.
+              Trusted by automotive enthusiasts, luxury vehicle owners, collectors and professionals — worldwide.
             </p>
           </div>
 
@@ -335,6 +475,71 @@ const Home = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* MISSION / VISION */}
+      <section className="py-24 border-b border-border bg-secondary/20">
+        <div className="container mx-auto grid md:grid-cols-2 gap-8">
+          <div className="rounded-2xl border border-border bg-card p-10 shadow-sm">
+            <div className="h-12 w-12 grid place-items-center rounded-full bg-gradient-gold mb-5">
+              <Target className="h-5 w-5 text-primary-foreground" />
+            </div>
+            <p className="text-xs tracking-[0.4em] uppercase text-gold mb-2">Our Mission</p>
+            <h3 className="font-display text-3xl">Protect. Enhance. Preserve.</h3>
+            <p className="mt-5 text-muted-foreground leading-relaxed">
+              To provide premium automotive protection, detailing solutions and professional-grade detailing products
+              that help preserve the beauty, performance and value of vehicles — while delivering exceptional customer
+              experiences.
+            </p>
+          </div>
+          <div className="rounded-2xl border border-border bg-card p-10 shadow-sm">
+            <div className="h-12 w-12 grid place-items-center rounded-full bg-gradient-gold mb-5">
+              <Eye className="h-5 w-5 text-primary-foreground" />
+            </div>
+            <p className="text-xs tracking-[0.4em] uppercase text-gold mb-2">Our Vision</p>
+            <h3 className="font-display text-3xl">A Globally Recognized Leader.</h3>
+            <p className="mt-5 text-muted-foreground leading-relaxed">
+              To become a globally recognized leader in automotive protection, detailing innovation and professional
+              detailing product distribution — continuously setting new standards of quality, reliability and excellence.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-24 border-b border-border">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-14">
+            <p className="text-xs tracking-[0.4em] uppercase text-gold mb-3">Answers</p>
+            <h2 className="font-display text-4xl md:text-5xl">Frequently Asked Questions</h2>
+            <div className="mt-6 h-px w-20 gold-divider mx-auto" />
+          </div>
+          <div className="space-y-4">
+            {faqs.map((f) => (
+              <details key={f.q} className="group rounded-2xl border border-border bg-card p-6 hover:border-gold transition-smooth">
+                <summary className="flex items-center justify-between cursor-pointer list-none font-display text-lg">
+                  {f.q}
+                  <ArrowRight className="h-4 w-4 text-gold transition-transform group-open:rotate-90" />
+                </summary>
+                <p className="mt-4 text-sm text-muted-foreground leading-relaxed">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CLOSING TAGLINE */}
+      <section className="py-20">
+        <div className="container mx-auto max-w-3xl text-center">
+          <p className="text-xs tracking-[0.4em] uppercase text-gold mb-4">CLNHYGEN</p>
+          <h2 className="font-display text-3xl md:text-4xl leading-tight">
+            Protecting Vehicles. <span className="text-gold">Delivering Excellence.</span> Driving Innovation.
+          </h2>
+          <p className="mt-5 text-muted-foreground">
+            From advanced PPF and ceramic coating solutions to premium detailing products and Lake Country polishing
+            systems — CLNHYGEN represents the future of automotive protection and professional vehicle care.
+          </p>
         </div>
       </section>
     </div>
