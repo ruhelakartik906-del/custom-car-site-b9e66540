@@ -40,6 +40,14 @@ const articles: Article[] = [
       "One of the most common questions car owners ask before investing in PPF is: How long does Paint Protection Film last? Explore lifespan, factors, and care tips.",
     image: ppfLifespanHero,
   },
+  {
+    slug: "common-myths-about-paint-protection-film",
+    category: "Paint Protection",
+    title: "Common Myths About Paint Protection Film You Should Know",
+    excerpt:
+      "Despite its growing popularity, many misconceptions surround PPF. In this article, we separate fact from fiction and uncover the truth behind the most common PPF myths.",
+    image: ppfMythsHero,
+  },
 ];
 
 const Bullet = ({ children }: { children: React.ReactNode }) => (
