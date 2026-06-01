@@ -174,7 +174,7 @@ const Header = () => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="lg:hidden border-t border-border bg-background/95 backdrop-blur">
+        <div className="lg:hidden fixed inset-x-0 top-[70px] bottom-0 z-40 overflow-y-auto border-t border-border bg-background/95 backdrop-blur">
           <nav className="container mx-auto py-6 flex flex-col gap-1">
             {[
               { to: "/", label: "Home" },
