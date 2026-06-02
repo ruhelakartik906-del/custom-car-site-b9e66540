@@ -1,19 +1,63 @@
-import { Package } from "lucide-react";
 import PageHero from "@/components/PageHero";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { ShoppingCart } from "lucide-react";
+
+import blueFinishing from "@/assets/products/blue-finishing-pad.jpg";
+import yellowBacking from "@/assets/products/yellow-backing-plate.jpg";
+import blackCcs from "@/assets/products/black-ccs-pad.jpg";
+import orangeCcs from "@/assets/products/orange-ccs-pad.jpg";
+import orangeCutting from "@/assets/products/orange-cutting-pad.jpg";
+import blueHd from "@/assets/products/blue-hd-pad.jpg";
+import orangeLight from "@/assets/products/orange-light-pad.jpg";
+
+const products = [
+  { title: "Blue Soft Finishing Foam Pad", image: blueFinishing },
+  { title: "Yellow Hook & Loop Backing Plate", image: yellowBacking },
+  { title: "Black CCS Heavy Cutting Foam Pad", image: blackCcs },
+  { title: "Orange CCS Medium Polishing Pad", image: orangeCcs },
+  { title: "Orange HD Cutting Foam Pad", image: orangeCutting },
+  { title: "Blue HD Polishing Foam Pad", image: blueHd },
+  { title: "Orange Light Finishing Foam Pad", image: orangeLight },
+];
 
 const Pricing = () => {
   return (
     <div>
-      <PageHero eyebrow="CLNHYGEN" title="Products" subtitle="Premium automotive protection and detailing products coming soon." />
+      <PageHero
+        eyebrow="CLNHYGEN"
+        title="Products"
+        subtitle="Premium automotive protection and detailing products engineered for a flawless finish."
+      />
 
-      <section className="py-24">
-        <div className="container mx-auto text-center max-w-xl">
-          <Package className="mx-auto h-16 w-16 text-gold opacity-80" />
-          <h2 className="mt-8 font-display text-3xl md:text-4xl">Coming Soon</h2>
-          <p className="mt-4 text-muted-foreground leading-relaxed">
-            We are preparing a curated range of world-class automotive protection, detailing, and surface care products for you.
-            Stay tuned — our full product catalog will be available shortly.
-          </p>
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {products.map((p) => (
+              <Card
+                key={p.title}
+                className="group overflow-hidden border-border/60 bg-card transition-all hover:border-gold/60 hover:shadow-xl"
+              >
+                <div className="aspect-square overflow-hidden bg-muted">
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    loading="lazy"
+                    className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-6 text-center">
+                  <h3 className="font-display text-lg md:text-xl min-h-[3.5rem] flex items-center justify-center">
+                    {p.title}
+                  </h3>
+                  <Button className="mt-5 w-full" variant="default">
+                    <ShoppingCart className="h-4 w-4" />
+                    Shop Now
+                  </Button>
+                </div>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
     </div>
