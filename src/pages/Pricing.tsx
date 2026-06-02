@@ -23,6 +23,15 @@ import orangeMicrofiberCutting from "@/assets/products/orange-microfiber-cutting
 import purpleWool from "@/assets/products/purple-wool-polishing-pad.jpg";
 import blueMicrofiberFinishing from "@/assets/products/blue-microfiber-finishing-pad.jpg";
 import blueHybridMicrofiber from "@/assets/products/blue-hybrid-microfiber-pad.jpg";
+import blackOrangeMicrofiber from "@/assets/products/black-orange-microfiber-pad.jpg";
+import woolCutting from "@/assets/products/wool-cutting-pad.jpg";
+import blueMicrofiberCombo1 from "@/assets/products/blue-microfiber-combo-pad-1.jpg";
+import blueMicrofiberCombo2 from "@/assets/products/blue-microfiber-combo-pad-2.jpg";
+import blueMicrofiberCombo3 from "@/assets/products/blue-microfiber-combo-pad-3.jpg";
+import blueMicrofiberCombo4 from "@/assets/products/blue-microfiber-combo-pad-4.jpg";
+import orangeMicrofiberCombo1 from "@/assets/products/orange-microfiber-combo-pad-1.jpg";
+import orangeMicrofiberCombo2 from "@/assets/products/orange-microfiber-combo-pad-2.jpg";
+import blueHdCuttingFoam from "@/assets/products/blue-hd-cutting-foam-pad.jpg";
 
 const products = [
   { title: "Blue Soft Finishing Foam Pad", image: blueFinishing },
@@ -45,6 +54,15 @@ const products = [
   { title: "Purple Wool Polishing & Finishing Pad", image: purpleWool },
   { title: "Blue Microfiber Soft Finishing Pad", image: blueMicrofiberFinishing },
   { title: "Blue Hybrid Microfiber Cutting Pad", image: blueHybridMicrofiber },
+  { title: "Black & Orange Microfiber Polishing Pad", image: blackOrangeMicrofiber },
+  { title: "Premium Wool Heavy Cutting Pad", image: woolCutting },
+  { title: "Blue Microfiber Combo Polishing Pad", image: blueMicrofiberCombo1 },
+  { title: "Blue Dual-Action Microfiber Pad", image: blueMicrofiberCombo2 },
+  { title: "Blue Microfiber Cutting & Finishing Set", image: blueMicrofiberCombo3 },
+  { title: "Blue Hybrid Foam & Microfiber Pad", image: blueMicrofiberCombo4 },
+  { title: "Orange Microfiber Polishing Combo Pad", image: orangeMicrofiberCombo1 },
+  { title: "Orange Dual-Sided Microfiber Pad", image: orangeMicrofiberCombo2 },
+  { title: "Blue HD Cutting Foam Pad Pro", image: blueHdCuttingFoam },
 ];
 
 const Pricing = () => {
