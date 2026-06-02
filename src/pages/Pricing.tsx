@@ -10,6 +10,11 @@ import orangeCcs from "@/assets/products/orange-ccs-pad.jpg";
 import orangeCutting from "@/assets/products/orange-cutting-pad.jpg";
 import blueHd from "@/assets/products/blue-hd-pad.jpg";
 import orangeLight from "@/assets/products/orange-light-pad.jpg";
+import blueMicrofiber from "@/assets/products/blue-microfiber-pad.jpg";
+import orangeWhiteStripe from "@/assets/products/orange-white-stripe-pad.jpg";
+import blueWhiteStripe from "@/assets/products/blue-white-stripe-pad.jpg";
+import blueMini from "@/assets/products/blue-mini-pad.jpg";
+import blackCcsDimple from "@/assets/products/black-ccs-dimple-pad.jpg";
 
 const products = [
   { title: "Blue Soft Finishing Foam Pad", image: blueFinishing },
@@ -19,6 +24,11 @@ const products = [
   { title: "Orange HD Cutting Foam Pad", image: orangeCutting },
   { title: "Blue HD Polishing Foam Pad", image: blueHd },
   { title: "Orange Light Finishing Foam Pad", image: orangeLight },
+  { title: "Blue Microfiber Cutting & Polishing Pad", image: blueMicrofiber },
+  { title: "Orange Medium Cutting Foam Pad", image: orangeWhiteStripe },
+  { title: "Blue Soft Polishing Foam Pad", image: blueWhiteStripe },
+  { title: "Blue Mini Detailing Foam Pad", image: blueMini },
+  { title: "Black CCS Dimple Cutting Foam Pad", image: blackCcsDimple },
 ];
 
 const Pricing = () => {
