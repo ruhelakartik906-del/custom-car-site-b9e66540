@@ -33,36 +33,38 @@ import orangeMicrofiberCombo1 from "@/assets/products/orange-microfiber-combo-pa
 import orangeMicrofiberCombo2 from "@/assets/products/orange-microfiber-combo-pad-2.jpg";
 import blueHdCuttingFoam from "@/assets/products/blue-hd-cutting-foam-pad.jpg";
 
+// 👇 Add the product URL inside the `link` field for each product below.
+// Example: link: "https://your-shop.com/product-page"
 const products = [
-  { title: "Blue Soft Finishing Foam Pad", image: blueFinishing },
-  { title: "Yellow Hook & Loop Backing Plate", image: yellowBacking },
-  { title: "Black CCS Heavy Cutting Foam Pad", image: blackCcs },
-  { title: "Orange CCS Medium Polishing Pad", image: orangeCcs },
-  { title: "Orange HD Cutting Foam Pad", image: orangeCutting },
-  { title: "Blue HD Polishing Foam Pad", image: blueHd },
-  { title: "Orange Light Finishing Foam Pad", image: orangeLight },
-  { title: "Blue Microfiber Cutting & Polishing Pad", image: blueMicrofiber },
-  { title: "Orange Medium Cutting Foam Pad", image: orangeWhiteStripe },
-  { title: "Blue Soft Polishing Foam Pad", image: blueWhiteStripe },
-  { title: "Blue Mini Detailing Foam Pad", image: blueMini },
-  { title: "Black CCS Dimple Cutting Foam Pad", image: blackCcsDimple },
-  { title: "Orange Soft Finishing Foam Pad", image: orangeSoftFinishing },
-  { title: "Premium Detailing Foam Applicator", image: detailingApplicator },
-  { title: "Professional Polishing & Buffing Kit", image: polishingKit },
-  { title: "Premium Microfiber Cleaning Cloth", image: microfiberCloth },
-  { title: "Orange Microfiber Hybrid Cutting Pad", image: orangeMicrofiberCutting },
-  { title: "Purple Wool Polishing & Finishing Pad", image: purpleWool },
-  { title: "Blue Microfiber Soft Finishing Pad", image: blueMicrofiberFinishing },
-  { title: "Blue Hybrid Microfiber Cutting Pad", image: blueHybridMicrofiber },
-  { title: "Black & Orange Microfiber Polishing Pad", image: blackOrangeMicrofiber },
-  { title: "Premium Wool Heavy Cutting Pad", image: woolCutting },
-  { title: "Blue Microfiber Combo Polishing Pad", image: blueMicrofiberCombo1 },
-  { title: "Blue Dual-Action Microfiber Pad", image: blueMicrofiberCombo2 },
-  { title: "Blue Microfiber Cutting & Finishing Set", image: blueMicrofiberCombo3 },
-  { title: "Blue Hybrid Foam & Microfiber Pad", image: blueMicrofiberCombo4 },
-  { title: "Orange Microfiber Polishing Combo Pad", image: orangeMicrofiberCombo1 },
-  { title: "Orange Dual-Sided Microfiber Pad", image: orangeMicrofiberCombo2 },
-  { title: "Blue HD Cutting Foam Pad Pro", image: blueHdCuttingFoam },
+  { title: "Blue Soft Finishing Foam Pad", image: blueFinishing, link: "#" },
+  { title: "Yellow Hook & Loop Backing Plate", image: yellowBacking, link: "#" },
+  { title: "Black CCS Heavy Cutting Foam Pad", image: blackCcs, link: "#" },
+  { title: "Orange CCS Medium Polishing Pad", image: orangeCcs, link: "#" },
+  { title: "Orange HD Cutting Foam Pad", image: orangeCutting, link: "#" },
+  { title: "Blue HD Polishing Foam Pad", image: blueHd, link: "#" },
+  { title: "Orange Light Finishing Foam Pad", image: orangeLight, link: "#" },
+  { title: "Blue Microfiber Cutting & Polishing Pad", image: blueMicrofiber, link: "#" },
+  { title: "Orange Medium Cutting Foam Pad", image: orangeWhiteStripe, link: "#" },
+  { title: "Blue Soft Polishing Foam Pad", image: blueWhiteStripe, link: "#" },
+  { title: "Blue Mini Detailing Foam Pad", image: blueMini, link: "#" },
+  { title: "Black CCS Dimple Cutting Foam Pad", image: blackCcsDimple, link: "#" },
+  { title: "Orange Soft Finishing Foam Pad", image: orangeSoftFinishing, link: "#" },
+  { title: "Premium Detailing Foam Applicator", image: detailingApplicator, link: "#" },
+  { title: "Professional Polishing & Buffing Kit", image: polishingKit, link: "#" },
+  { title: "Premium Microfiber Cleaning Cloth", image: microfiberCloth, link: "#" },
+  { title: "Orange Microfiber Hybrid Cutting Pad", image: orangeMicrofiberCutting, link: "#" },
+  { title: "Purple Wool Polishing & Finishing Pad", image: purpleWool, link: "#" },
+  { title: "Blue Microfiber Soft Finishing Pad", image: blueMicrofiberFinishing, link: "#" },
+  { title: "Blue Hybrid Microfiber Cutting Pad", image: blueHybridMicrofiber, link: "#" },
+  { title: "Black & Orange Microfiber Polishing Pad", image: blackOrangeMicrofiber, link: "#" },
+  { title: "Premium Wool Heavy Cutting Pad", image: woolCutting, link: "#" },
+  { title: "Blue Microfiber Combo Polishing Pad", image: blueMicrofiberCombo1, link: "#" },
+  { title: "Blue Dual-Action Microfiber Pad", image: blueMicrofiberCombo2, link: "#" },
+  { title: "Blue Microfiber Cutting & Finishing Set", image: blueMicrofiberCombo3, link: "#" },
+  { title: "Blue Hybrid Foam & Microfiber Pad", image: blueMicrofiberCombo4, link: "#" },
+  { title: "Orange Microfiber Polishing Combo Pad", image: orangeMicrofiberCombo1, link: "#" },
+  { title: "Orange Dual-Sided Microfiber Pad", image: orangeMicrofiberCombo2, link: "#" },
+  { title: "Blue HD Cutting Foam Pad Pro", image: blueHdCuttingFoam, link: "#" },
 ];
 
 const Pricing = () => {
@@ -94,9 +96,11 @@ const Pricing = () => {
                   <h3 className="font-display text-lg md:text-xl min-h-[3.5rem] flex items-center justify-center">
                     {p.title}
                   </h3>
-                  <Button className="mt-5 w-full" variant="default">
-                    <ShoppingCart className="h-4 w-4" />
-                    Shop Now
+                  <Button className="mt-5 w-full" variant="default" asChild>
+                    <a href={p.link} target="_blank" rel="noopener noreferrer">
+                      <ShoppingCart className="h-4 w-4" />
+                      Shop Now
+                    </a>
                   </Button>
                 </div>
               </Card>
