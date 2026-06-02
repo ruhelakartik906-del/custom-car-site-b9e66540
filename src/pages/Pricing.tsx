@@ -56,7 +56,7 @@ const products = [
   { title: "Purple Wool Polishing & Finishing Pad", image: purpleWool, link: "#" },
   { title: "Blue Microfiber Soft Finishing Pad", image: blueMicrofiberFinishing, link: "#" },
   { title: "Blue Hybrid Microfiber Cutting Pad", image: blueHybridMicrofiber, link: "#" },
-  { title: "Black & Orange Microfiber Polishing Pad", image: blackOrangeMicrofiber, link: "#" },
+  { title: "LC Light Cutting Microfiber Pad 3.5 Inch", image: blackOrangeMicrofiber, link: "#" },
   { title: "Premium Wool Heavy Cutting Pad", image: woolCutting, link: "#" },
   { title: "Blue Microfiber Combo Polishing Pad", image: blueMicrofiberCombo1, link: "#" },
   { title: "Blue Dual-Action Microfiber Pad", image: blueMicrofiberCombo2, link: "#" },
