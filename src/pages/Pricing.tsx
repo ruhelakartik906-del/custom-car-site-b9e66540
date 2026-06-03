@@ -42,7 +42,7 @@ const products = [
   { title: "Orange CCS Medium Polishing Pad", image: orangeCcs, link: "#" },
   { title: "Orange HD Cutting Foam Pad", image: orangeCutting, link: "#" },
   { title: "Blue HD Polishing Foam Pad", image: blueHd, link: "#" },
-  { title: "Orange Light Finishing Foam Pad", image: orangeLight, link: "#" },
+  { title: "Orange Light Finishing Foam Pad", image: orangeLight, link: "https://www.amazon.in/dp/B0H15P494F" },
   { title: "Blue Microfiber Cutting & Polishing Pad", image: blueMicrofiber, link: "#" },
   { title: "Orange Medium Cutting Foam Pad", image: orangeWhiteStripe, link: "https://www.amazon.in/dp/B0H11MS4VW" },
   { title: "Blue Soft Polishing Foam Pad", image: blueWhiteStripe, link: "https://www.amazon.in/dp/B0H11W6Q3P" },
