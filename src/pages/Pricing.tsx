@@ -38,7 +38,7 @@ import blueHdCuttingFoam from "@/assets/products/blue-hd-cutting-foam-pad.jpg";
 const products = [
   { title: "Blue Soft Finishing Foam Pad", image: blueFinishing, link: "#" },
   { title: "Yellow Hook & Loop Backing Plate", image: yellowBacking, link: "https://www.amazon.in/dp/B0H11X8QCN" },
-  { title: "Black CCS Heavy Cutting Foam Pad", image: blackCcs, link: "#" },
+  { title: "Black CCS Heavy Cutting Foam Pad", image: blackCcs, link: "https://www.amazon.in/dp/B0H11N97JJ" },
   { title: "Orange CCS Medium Polishing Pad", image: orangeCcs, link: "#" },
   { title: "Orange HD Cutting Foam Pad", image: orangeCutting, link: "#" },
   { title: "Blue HD Polishing Foam Pad", image: blueHd, link: "#" },
