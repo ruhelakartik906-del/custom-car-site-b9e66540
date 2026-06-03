@@ -47,7 +47,7 @@ const products = [
   { title: "Orange Medium Cutting Foam Pad", image: orangeWhiteStripe, link: "#" },
   { title: "Blue Soft Polishing Foam Pad", image: blueWhiteStripe, link: "#" },
   { title: "Blue Mini Detailing Foam Pad", image: blueMini, link: "https://www.amazon.in/dp/B0H11NRY5B" },
-  { title: "Black CCS Dimple Cutting Foam Pad", image: blackCcsDimple, link: "#" },
+  { title: "Black CCS Dimple Cutting Foam Pad", image: blackCcsDimple, link: "https://www.amazon.in/dp/B0H11N97JJ" },
   { title: "Orange Soft Finishing Foam Pad", image: orangeSoftFinishing, link: "#" },
   { title: "Premium Detailing Foam Applicator", image: detailingApplicator, link: "#" },
   { title: "Professional Polishing & Buffing Kit", image: polishingKit, link: "#" },
