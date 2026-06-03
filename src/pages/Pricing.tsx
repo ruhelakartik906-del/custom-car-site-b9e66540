@@ -52,7 +52,7 @@ const products = [
   { title: "Premium Detailing Foam Applicator", image: detailingApplicator, link: "#" },
   { title: "Professional Polishing & Buffing Kit", image: polishingKit, link: "#" },
   { title: "Premium Microfiber Cleaning Cloth", image: microfiberCloth, link: "#" },
-  { title: "Orange Microfiber Hybrid Cutting Pad", image: orangeMicrofiberCutting, link: "#" },
+  { title: "Orange Microfiber Hybrid Cutting Pad", image: orangeMicrofiberCutting, link: "https://www.amazon.in/dp/B0H11GY81F" },
   { title: "Purple Wool Polishing & Finishing Pad", image: purpleWool, link: "https://www.amazon.in/dp/B0H11S9PZR" },
   { title: "Blue Microfiber Soft Finishing Pad", image: blueMicrofiberFinishing, link: "https://www.amazon.in/dp/B0H11RS193" },
   { title: "Blue Hybrid Microfiber Cutting Pad", image: blueHybridMicrofiber, link: "https://www.amazon.in/dp/B0H11VMKPH" },
