@@ -239,6 +239,63 @@ const Home = () => {
         </div>
       </section>
 
+      {/* GLOBAL BRANDS */}
+      <section className="py-24 border-b border-border bg-secondary/20">
+        <div className="container mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-xs tracking-[0.4em] uppercase text-gold mb-3">Trusted Partners</p>
+            <h2 className="font-display text-4xl md:text-5xl">Global Brands We Trust</h2>
+            <div className="mt-6 h-px w-20 gold-divider mx-auto" />
+            <p className="mt-6 max-w-2xl mx-auto text-muted-foreground">
+              Exceptional results require exceptional products. CLNHYGEN partners with globally recognized manufacturers
+              known for quality, innovation and performance.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {partners.map((p) => (
+              <div key={p.name} className="rounded-2xl border border-border bg-card p-7 hover:border-gold hover:-translate-y-1 transition-all">
+                <div className="h-12 w-12 grid place-items-center rounded-full bg-gradient-gold mb-5">
+                  <Award className="h-5 w-5 text-primary-foreground" />
+                </div>
+                <h3 className="font-display text-2xl">{p.name}</h3>
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* LAKE COUNTRY DISTRIBUTOR */}
+      <section className="py-24 border-b border-border">
+        <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="text-xs tracking-[0.4em] uppercase text-gold mb-3">Authorized Distributor</p>
+            <h2 className="font-display text-4xl md:text-5xl leading-tight">
+              Lake Country <span className="text-gold">Manufacturing</span>
+            </h2>
+            <p className="mt-5 text-muted-foreground leading-relaxed">
+              CLNHYGEN proudly serves as a distributor of <strong className="text-foreground">Lake Country
+              Manufacturing</strong> — one of the most respected names in professional automotive detailing. For
+              decades, Lake Country has supplied innovative polishing solutions to detailers, body shops and
+              manufacturers worldwide.
+            </p>
+            <p className="mt-4 text-sm text-muted-foreground">
+              We provide genuine Lake Country products supported by expert guidance and professional industry knowledge.
+            </p>
+            <Link to="/contact" className="mt-8 inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full text-sm font-semibold tracking-wide uppercase hover:shadow-elegant transition-smooth">
+              Enquire Products <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <div className="rounded-2xl border border-border bg-card p-8 shadow-elegant">
+            <h3 className="font-display text-xl mb-5">Available Product Range</h3>
+            <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2">
+              {lakeCountryProducts.map((p) => <Bullet key={p}>Lake Country {p}</Bullet>)}
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* SECTION 1 — PPF (image left) */}
       <section className="py-24 border-b border-border bg-secondary/20">
         <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
@@ -383,63 +440,6 @@ const Home = () => {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* GLOBAL BRANDS */}
-      <section className="py-24 border-b border-border bg-secondary/20">
-        <div className="container mx-auto">
-          <div className="text-center mb-14">
-            <p className="text-xs tracking-[0.4em] uppercase text-gold mb-3">Trusted Partners</p>
-            <h2 className="font-display text-4xl md:text-5xl">Global Brands We Trust</h2>
-            <div className="mt-6 h-px w-20 gold-divider mx-auto" />
-            <p className="mt-6 max-w-2xl mx-auto text-muted-foreground">
-              Exceptional results require exceptional products. CLNHYGEN partners with globally recognized manufacturers
-              known for quality, innovation and performance.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {partners.map((p) => (
-              <div key={p.name} className="rounded-2xl border border-border bg-card p-7 hover:border-gold hover:-translate-y-1 transition-all">
-                <div className="h-12 w-12 grid place-items-center rounded-full bg-gradient-gold mb-5">
-                  <Award className="h-5 w-5 text-primary-foreground" />
-                </div>
-                <h3 className="font-display text-2xl">{p.name}</h3>
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* LAKE COUNTRY DISTRIBUTOR */}
-      <section className="py-24 border-b border-border">
-        <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <p className="text-xs tracking-[0.4em] uppercase text-gold mb-3">Authorized Distributor</p>
-            <h2 className="font-display text-4xl md:text-5xl leading-tight">
-              Lake Country <span className="text-gold">Manufacturing</span>
-            </h2>
-            <p className="mt-5 text-muted-foreground leading-relaxed">
-              CLNHYGEN proudly serves as a distributor of <strong className="text-foreground">Lake Country
-              Manufacturing</strong> — one of the most respected names in professional automotive detailing. For
-              decades, Lake Country has supplied innovative polishing solutions to detailers, body shops and
-              manufacturers worldwide.
-            </p>
-            <p className="mt-4 text-sm text-muted-foreground">
-              We provide genuine Lake Country products supported by expert guidance and professional industry knowledge.
-            </p>
-            <Link to="/contact" className="mt-8 inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full text-sm font-semibold tracking-wide uppercase hover:shadow-elegant transition-smooth">
-              Enquire Products <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-          <div className="rounded-2xl border border-border bg-card p-8 shadow-elegant">
-            <h3 className="font-display text-xl mb-5">Available Product Range</h3>
-            <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2">
-              {lakeCountryProducts.map((p) => <Bullet key={p}>Lake Country {p}</Bullet>)}
-            </ul>
           </div>
         </div>
       </section>
