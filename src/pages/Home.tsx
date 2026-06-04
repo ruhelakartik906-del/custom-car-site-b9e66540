@@ -239,33 +239,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* GLOBAL BRANDS */}
-      <section className="py-24 border-b border-border bg-secondary/20">
-        <div className="container mx-auto">
-          <div className="text-center mb-14">
-            <p className="text-xs tracking-[0.4em] uppercase text-gold mb-3">Trusted Partners</p>
-            <h2 className="font-display text-4xl md:text-5xl">Global Brands We Trust</h2>
-            <div className="mt-6 h-px w-20 gold-divider mx-auto" />
-            <p className="mt-6 max-w-2xl mx-auto text-muted-foreground">
-              Exceptional results require exceptional products. CLNHYGEN partners with globally recognized manufacturers
-              known for quality, innovation and performance.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {partners.map((p) => (
-              <div key={p.name} className="rounded-2xl border border-border bg-card p-7 hover:border-gold hover:-translate-y-1 transition-all">
-                <div className="h-12 w-12 grid place-items-center rounded-full bg-gradient-gold mb-5">
-                  <Award className="h-5 w-5 text-primary-foreground" />
-                </div>
-                <h3 className="font-display text-2xl">{p.name}</h3>
-                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* LAKE COUNTRY DISTRIBUTOR */}
       <section className="py-24 border-b border-border">
         <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
@@ -292,6 +265,33 @@ const Home = () => {
             <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2">
               {lakeCountryProducts.map((p) => <Bullet key={p}>Lake Country {p}</Bullet>)}
             </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* GLOBAL BRANDS */}
+      <section className="py-24 border-b border-border bg-secondary/20">
+        <div className="container mx-auto">
+          <div className="text-center mb-14">
+            <p className="text-xs tracking-[0.4em] uppercase text-gold mb-3">Trusted Partners</p>
+            <h2 className="font-display text-4xl md:text-5xl">Global Brands We Trust</h2>
+            <div className="mt-6 h-px w-20 gold-divider mx-auto" />
+            <p className="mt-6 max-w-2xl mx-auto text-muted-foreground">
+              Exceptional results require exceptional products. CLNHYGEN partners with globally recognized manufacturers
+              known for quality, innovation and performance.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {partners.map((p) => (
+              <div key={p.name} className="rounded-2xl border border-border bg-card p-7 hover:border-gold hover:-translate-y-1 transition-all">
+                <div className="h-12 w-12 grid place-items-center rounded-full bg-gradient-gold mb-5">
+                  <Award className="h-5 w-5 text-primary-foreground" />
+                </div>
+                <h3 className="font-display text-2xl">{p.name}</h3>
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
