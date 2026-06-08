@@ -1231,6 +1231,8 @@ const Blog = () => {
             {current.slug === "ppf-vs-ceramic-coating-which-is-better" && <PpfVsCeramicArticle />}
             {current.slug === "how-long-does-paint-protection-film-last" && <PpfLifespanArticle />}
             {current.slug === "common-myths-about-paint-protection-film" && <PpfMythsArticle />}
+            {current.slug === "clnhygen-ppf-detailing-north-india-cities-guide" && <NorthIndiaCitiesArticle />}
+
           </div>
         </section>
       </div>
