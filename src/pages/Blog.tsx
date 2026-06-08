@@ -55,8 +55,16 @@ const articles: Article[] = [
     excerpt:
       "From Dehradun's Himalayan terrain to Gurgaon's luxury car capital — a complete city-wise guide to CLNHYGEN's PPF, ceramic coating, and detailing services across North India.",
     image: ppfHero,
+  {
+    slug: "why-stek-is-worlds-leading-ppf-brand",
+    category: "STEK PPF",
+    title: "Why STEK is the World's Leading Paint Protection Film Brand",
+    excerpt:
+      "Discover why STEK PPF is the preferred choice for luxury car owners worldwide — self-healing technology, STEK vs XPEL vs Llumar comparison, and why premium owners trust CLNHYGEN as STEK distributor in India.",
+    image: ppfVsCeramicHero,
   },
 ];
+
 
 
 const Bullet = ({ children }: { children: React.ReactNode }) => (
