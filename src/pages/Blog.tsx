@@ -65,6 +65,14 @@ const articles: Article[] = [
       "Discover why STEK PPF is the preferred choice for luxury car owners worldwide — self-healing technology, STEK vs XPEL vs Llumar comparison, and why premium owners trust CLNHYGEN as STEK distributor in India.",
     image: ppfVsCeramicHero,
   },
+  {
+    slug: "clnhygen-premium-brand-distributor-india-stek-carpro-autokrom-saint-gobain",
+    category: "Brand Distribution",
+    title: "CLNHYGEN: India's Trusted Distributor for STEK PPF, CARPRO Ceramic Coating, AUTOKROM & Saint-Gobain Automotive Solutions",
+    excerpt:
+      "Complete guide to premium automotive protection brands distributed by CLNHYGEN in India — STEK Paint Protection Film, CARPRO ceramic coating, AUTOKROM surface protection, and Saint-Gobain automotive technologies.",
+    image: ppfHero,
+  },
 ];
 
 
