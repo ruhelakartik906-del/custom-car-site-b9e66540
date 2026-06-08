@@ -42,7 +42,7 @@ const indianStates = [
 
 const Header = () => {
   const [open, setOpen] = useState(false);
-  const [location_, setLocation_] = useState("Meerut");
+  const [location_, setLocation_] = useState("Uttar Pradesh");
   const location = useLocation();
 
   useEffect(() => {
