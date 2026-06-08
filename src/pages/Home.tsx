@@ -203,7 +203,7 @@ const Home = () => {
           <div className="flex gap-12 animate-[marquee_30s_linear_infinite] whitespace-nowrap">
             {[...brands, ...brands, ...brands].map((b, i) => (
               <div key={i} className="flex items-center gap-3 text-foreground/70">
-                <Car className="h-4 w-4 text-gold" />
+                <MapPin className="h-4 w-4 text-gold" />
                 <span className="font-display text-lg tracking-wider uppercase">{b}</span>
               </div>
             ))}
