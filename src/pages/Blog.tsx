@@ -1523,6 +1523,8 @@ const Blog = () => {
             {current.slug === "how-long-does-paint-protection-film-last" && <PpfLifespanArticle />}
             {current.slug === "common-myths-about-paint-protection-film" && <PpfMythsArticle />}
             {current.slug === "clnhygen-ppf-detailing-north-india-cities-guide" && <NorthIndiaCitiesArticle />}
+            {current.slug === "why-stek-is-worlds-leading-ppf-brand" && <StekArticle />}
+
 
           </div>
         </section>
