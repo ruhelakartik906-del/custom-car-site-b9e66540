@@ -48,7 +48,16 @@ const articles: Article[] = [
       "Despite its growing popularity, many misconceptions surround PPF. In this article, we separate fact from fiction and uncover the truth behind the most common PPF myths.",
     image: ppfMythsHero,
   },
+  {
+    slug: "clnhygen-ppf-detailing-north-india-cities-guide",
+    category: "City Guides",
+    title: "CLNHYGEN PPF & Car Detailing Across North India: Dehradun, Meerut, Ghaziabad & Gurgaon Complete Guide",
+    excerpt:
+      "From Dehradun's Himalayan terrain to Gurgaon's luxury car capital — a complete city-wise guide to CLNHYGEN's PPF, ceramic coating, and detailing services across North India.",
+    image: ppfHero,
+  },
 ];
+
 
 const Bullet = ({ children }: { children: React.ReactNode }) => (
   <li className="flex items-start gap-3 text-muted-foreground">
@@ -784,8 +793,423 @@ const PpfMythsArticle = () => (
   </>
 );
 
+const CitySection = ({
+  city,
+  intro,
+  why,
+  services,
+  benefits,
+  pricing,
+  process,
+  maintenance,
+  faqs,
+  conclusion,
+  contact,
+  keywords,
+}: {
+  city: string;
+  intro: string[];
+  why: string[];
+  services: { t: string; d: string }[];
+  benefits: { t: string; d: string }[];
+  pricing: string[];
+  process: string[];
+  maintenance: string[];
+  faqs: { q: string; a: string }[];
+  conclusion: string;
+  contact: string;
+  keywords: string;
+}) => (
+  <div className="mt-20 first:mt-0">
+    <div className="flex items-center gap-2 text-xs tracking-[0.4em] uppercase text-gold mb-3">
+      <Car className="h-4 w-4" /> {city}
+    </div>
+    <h3 className="font-display text-3xl md:text-4xl">CLNHYGEN PPF & Detailing in {city}</h3>
+    <div className="mt-3 h-px w-16 gold-divider" />
+
+    <div className="mt-6 space-y-4">
+      {intro.map((p, i) => (
+        <p key={i} className="text-muted-foreground leading-relaxed">{p}</p>
+      ))}
+    </div>
+
+    <div className="mt-10">
+      <h4 className="font-display text-2xl flex items-center gap-3"><ShieldCheck className="h-5 w-5 text-gold" /> Why {city} Owners Choose CLNHYGEN</h4>
+      <ul className="mt-5 grid gap-3">
+        {why.map((w) => <Bullet key={w}>{w}</Bullet>)}
+      </ul>
+    </div>
+
+    <div className="mt-10">
+      <h4 className="font-display text-2xl flex items-center gap-3"><Wrench className="h-5 w-5 text-gold" /> Key Services in {city}</h4>
+      <div className="mt-6 grid md:grid-cols-2 gap-5">
+        {services.map((s) => (
+          <div key={s.t} className="bg-card border border-border p-5 rounded-sm">
+            <h5 className="font-display text-lg">{s.t}</h5>
+            <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div className="mt-10">
+      <h4 className="font-display text-2xl flex items-center gap-3"><Gem className="h-5 w-5 text-gold" /> Benefits</h4>
+      <div className="mt-6 grid md:grid-cols-2 gap-5">
+        {benefits.map((b) => (
+          <div key={b.t} className="bg-card border border-border p-5 rounded-sm">
+            <h5 className="font-display text-lg">{b.t}</h5>
+            <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{b.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div className="mt-10">
+      <h4 className="font-display text-2xl flex items-center gap-3"><Sparkles className="h-5 w-5 text-gold" /> CLNHYGEN PPF Cost in {city} (2026 Updated)</h4>
+      <ul className="mt-5 grid gap-3">
+        {pricing.map((p) => <Bullet key={p}>{p}</Bullet>)}
+      </ul>
+    </div>
+
+    <div className="mt-10">
+      <h4 className="font-display text-2xl flex items-center gap-3"><Timer className="h-5 w-5 text-gold" /> Installation Process</h4>
+      <ol className="mt-5 space-y-3 list-decimal list-inside text-muted-foreground">
+        {process.map((p) => <li key={p} className="leading-relaxed">{p}</li>)}
+      </ol>
+    </div>
+
+    <div className="mt-10">
+      <h4 className="font-display text-2xl flex items-center gap-3"><AlertTriangle className="h-5 w-5 text-gold" /> Maintenance Tips</h4>
+      <ul className="mt-5 grid gap-3">
+        {maintenance.map((m) => <Bullet key={m}>{m}</Bullet>)}
+      </ul>
+    </div>
+
+    <div className="mt-10">
+      <h4 className="font-display text-2xl flex items-center gap-3"><HelpCircle className="h-5 w-5 text-gold" /> FAQs — {city}</h4>
+      <div className="mt-6 space-y-4">
+        {faqs.map((f) => (
+          <div key={f.q} className="bg-card border border-border p-5 rounded-sm">
+            <p className="font-display text-lg">{f.q}</p>
+            <p className="mt-2 text-muted-foreground leading-relaxed">{f.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div className="mt-10 bg-card border border-border p-6 rounded-sm">
+      <h4 className="font-display text-xl">Conclusion</h4>
+      <p className="mt-3 text-muted-foreground leading-relaxed">{conclusion}</p>
+      <p className="mt-4 text-sm text-muted-foreground"><span className="text-foreground font-medium">Contact:</span> {contact}</p>
+      <p className="mt-3 text-xs text-muted-foreground"><span className="text-foreground font-medium">Keywords:</span> {keywords}</p>
+    </div>
+  </div>
+);
+
+const NorthIndiaCitiesArticle = () => (
+  <>
+    <div className="flex items-center gap-2 text-xs tracking-[0.4em] uppercase text-gold mb-4">
+      <BookOpen className="h-4 w-4" /> City Guides
+    </div>
+    <h2 className="font-display text-4xl md:text-5xl">
+      CLNHYGEN PPF & Car Detailing Across North India: Dehradun, Meerut, Ghaziabad & Gurgaon Complete Guide
+    </h2>
+    <div className="mt-4 h-px w-20 gold-divider" />
+
+    <div className="mt-8 grid lg:grid-cols-3 gap-10">
+      <div className="lg:col-span-2 space-y-5">
+        <p className="text-muted-foreground leading-relaxed">
+          Looking for the best car detailing and premium Paint Protection Film (PPF) services across North India? CLNHYGEN delivers professional PPF, ceramic coating, graphene coating, paint correction, and full detailing tailored to each city's roads and climate. This complete guide covers everything about CLNHYGEN in Dehradun, Meerut, Ghaziabad, and Gurgaon — services, benefits, pricing, installation, and why discerning car owners trust the brand.
+        </p>
+        <p className="text-muted-foreground leading-relaxed">
+          CLNHYGEN is a reputed premium car detailing brand operating since 2013, known for high-quality workmanship and top-tier products. Their focus on advanced protection makes them a top choice for owners who want long-lasting showroom finish — whether facing Himalayan terrain, NCR traffic, or luxury-car expectations.
+        </p>
+      </div>
+      <div className="aspect-[4/3] overflow-hidden rounded-sm shadow-elegant">
+        <img src={ppfHero} alt="CLNHYGEN PPF across North India" loading="lazy" className="h-full w-full object-cover" />
+      </div>
+    </div>
+
+    {/* DEHRADUN */}
+    <CitySection
+      city="Dehradun"
+      intro={[
+        "Are you looking for the best car detailing in Dehradun or premium CLNHYGEN PPF Dehradun services to protect and restore your vehicle's shine? Whether it's a luxury car, SUV, or everyday commuter, CLNHYGEN delivers professional paint protection film, ceramic coating, graphene coating, and full detailing solutions tailored for Dehradun's challenging roads and climate.",
+        "Dehradun's dusty roads, monsoons, stone chips on routes like Mussoorie Road, and UV exposure demand robust protection. CLNHYGEN combines premium products with skilled execution to deliver reliable, warranty-backed results that enhance resale value.",
+      ]}
+      why={[
+        "Expert application of self-healing PPF that guards against scratches, chips, and contaminants",
+        "Premium ceramic and graphene coatings for unmatched hydrophobicity and gloss",
+        "Professional paint correction and detailing that revives even neglected paint",
+        "Services suitable for luxury cars, bikes, and high-end SUVs",
+        "Attention to detail with dust-free studio environment",
+      ]}
+      services={[
+        { t: "Paint Protection Film (PPF)", d: "Full body, front kit, or partial protection with self-healing TPU films." },
+        { t: "Ceramic & Graphene Coating", d: "Long-lasting shine and chemical resistance." },
+        { t: "Paint Correction & Polishing", d: "Remove swirl marks, oxidation, and restore depth." },
+        { t: "Car Wrapping & Vinyl Wraps", d: "Matte, gloss, or custom finishes." },
+        { t: "Interior Detailing", d: "Deep cleaning of seats, carpets, dashboard, and leather conditioning." },
+        { t: "Full Detailing Packages", d: "Complete exterior + interior rejuvenation." },
+        { t: "Bike Detailing & Protection", d: "Premium care for two-wheelers." },
+      ]}
+      benefits={[
+        { t: "Superior Paint Protection", d: "Shields against stone chips, bird droppings, tree sap, and road debris." },
+        { t: "Self-Healing Technology", d: "Minor scratches vanish with heat." },
+        { t: "Hydrophobic & Easy Maintenance", d: "Water, dirt, and dust repel easily." },
+        { t: "UV & Chemical Resistance", d: "Prevents fading in Dehradun's altitude and pollution." },
+        { t: "Enhanced Gloss & Aesthetics", d: "Maintains or improves original finish." },
+        { t: "Cost Savings", d: "Reduces frequent repairs and detailing expenses." },
+        { t: "Warranty-Backed", d: "Peace of mind with professional installation." },
+      ]}
+      pricing={[
+        "Partial PPF Kit (bonnet, bumper, mirrors): ₹15,000 – ₹45,000",
+        "Full Front Package: ₹45,000 – ₹85,000",
+        "Full Body PPF: ₹70,000 – ₹3,00,000+ (varies by car model)",
+        "Ceramic Coating: Starts from ₹8,000 – ₹35,000",
+        "Full Detailing Packages: ₹5,000 – ₹25,000+",
+      ]}
+      process={[
+        "Inspection & Wash — Thorough cleaning and assessment",
+        "Paint Correction — If required, for flawless base",
+        "Precise Application — In a controlled, dust-free environment",
+        "Curing & Quality Check — Heat curing and final inspection",
+        "Aftercare Guidance — Tips for long-lasting results",
+      ]}
+      maintenance={[
+        "Use pH-neutral car shampoos",
+        "Avoid harsh chemicals and automatic brush washes initially",
+        "Regular ceramic boosters for extra protection",
+        "Park in shade when possible",
+        "Annual inspection for edges and coverage",
+      ]}
+      faqs={[
+        { q: "Is CLNHYGEN PPF visible on the car?", a: "No — premium films are virtually invisible while providing full protection." },
+        { q: "Can I remove PPF later?", a: "Yes, it peels off without damaging original paint." },
+        { q: "Does CLNHYGEN serve doorstep in Dehradun?", a: "They offer studio services and may coordinate doorstep for select packages. Contact for details." },
+        { q: "Warranty offered?", a: "Extensive warranties on PPF, ceramic coatings, and workmanship." },
+        { q: "Best time to get services done?", a: "On a new car or after thorough paint correction." },
+      ]}
+      conclusion="If you want the best paint protection film and car detailing in Dehradun, CLNHYGEN delivers professional results that protect your investment and keep your vehicle looking pristine. From PPF to full detailing, their expertise helps cars withstand Dehradun's demanding conditions."
+      contact="+91 84499 00095 | +91 90847 24507 | www.clnhygen.com"
+      keywords="CLNHYGEN Dehradun, best car detailing Dehradun, CLNHYGEN PPF Dehradun, paint protection film CLNHYGEN, ceramic coating Dehradun, premium car protection Dehradun, car PPF near me Dehradun."
+    />
+
+    {/* MEERUT */}
+    <CitySection
+      city="Meerut"
+      intro={[
+        "Are you looking for the best PPF in Meerut to safeguard your car's paint from stone chips, road debris, dust, and harsh UV rays? Meerut car owners are increasingly choosing CLNHYGEN PPF for premium protection combined with expert detailing that keeps vehicles looking showroom-new for years.",
+        "Operating from Mohkampur Industrial Area (near Bajaj and Renault showrooms), CLNHYGEN has been delivering professional car care since 2013 with a strong focus on quality and customer satisfaction.",
+      ]}
+      why={[
+        "Expert application protects against stone chips and gravel on regional routes",
+        "Self-healing technology repairs minor scratches automatically",
+        "Superior hydrophobicity fights dust and water spots common in the area",
+        "Professional paint correction revives dull or swirled paint",
+        "Comprehensive services that boost resale value for Fortuner, Creta, Thar, and luxury cars",
+      ]}
+      services={[
+        { t: "Premium PPF Installation", d: "Full body, front kit, partial, or custom coverage." },
+        { t: "Ceramic & Graphene Coating", d: "Advanced nano-protection for shine and durability." },
+        { t: "Paint Correction & Polishing", d: "Remove swirl marks and restore depth." },
+        { t: "Interior & Exterior Detailing", d: "Deep cleaning, leather conditioning, and more." },
+        { t: "Car Wrapping & Additional Protection", d: "Vinyl wraps and specialized films." },
+        { t: "Luxury & Bike Detailing Packages", d: "Tailored to high-end vehicles." },
+      ]}
+      benefits={[
+        { t: "Self-Healing Protection", d: "Minor scratches disappear with heat exposure." },
+        { t: "Impact & Scratch Resistance", d: "Shields against road debris, bird droppings, and tree sap." },
+        { t: "Hydrophobic Surface", d: "Water, dirt, and dust repel easily for easier maintenance." },
+        { t: "UV & Chemical Resistance", d: "Prevents fading and oxidation in intense summers." },
+        { t: "Invisible & Gloss-Enhancing", d: "Maintains original paint depth and shine." },
+        { t: "Long-Term Warranty", d: "Peace of mind with professional workmanship guarantee." },
+        { t: "Resale Value Boost", d: "Protected and detailed cars fetch higher prices." },
+      ]}
+      pricing={[
+        "Partial/Front PPF Kit (bonnet, bumper, mirrors, headlights): ₹25,000 – ₹80,000",
+        "Full Front Package: ₹60,000 – ₹1,40,000+",
+        "Full Body PPF: ₹1,20,000 – ₹3,50,000+ (depending on vehicle size and options)",
+        "Ceramic Coating Packages: ₹10,000 – ₹40,000+",
+        "Full Detailing + Protection Combos: Competitive bundled pricing",
+      ]}
+      process={[
+        "Detailed Inspection & Wash — Thorough cleaning and paint assessment",
+        "Paint Correction — Restore flawless surface if required",
+        "Precision Application — Expert cutting and installation in controlled conditions",
+        "Curing & Quality Check — Heat curing followed by rigorous inspection",
+        "Aftercare Instructions — Tips to maximize longevity",
+      ]}
+      maintenance={[
+        "Wash regularly with pH-neutral shampoo and microfiber cloths",
+        "Avoid automatic brush car washes initially",
+        "Use recommended ceramic boosters",
+        "Remove bird droppings and contaminants promptly",
+        "Schedule annual professional checks",
+      ]}
+      faqs={[
+        { q: "Is CLNHYGEN PPF visible?", a: "No — high-quality films are virtually invisible." },
+        { q: "Can the PPF be removed?", a: "Yes, without damaging the original paint." },
+        { q: "How long does CLNHYGEN PPF last in Meerut?", a: "Typically 7–10+ years with proper maintenance." },
+        { q: "Do they offer doorstep service?", a: "Primarily studio-based with possible coordination for select packages." },
+        { q: "Is it worth investing in CLNHYGEN PPF?", a: "Absolutely — it protects your investment, reduces maintenance costs, and enhances appearance." },
+      ]}
+      conclusion="Car owners in Meerut are choosing CLNHYGEN PPF for reliable protection, exceptional detailing, and long-lasting results that withstand local driving conditions. Their expertise in premium paint protection film and car care makes them a top destination for vehicle enthusiasts."
+      contact="Mohkampur Industrial Area, Meerut | +91 84499 00095 | +91 90847 24507 | www.clnhygen.com"
+      keywords="CLNHYGEN Meerut, best PPF in Meerut, CLNHYGEN PPF Meerut, car detailing Meerut, paint protection film Meerut, ceramic coating Meerut, premium car protection Meerut, self healing PPF Meerut."
+    />
+
+    {/* GHAZIABAD */}
+    <CitySection
+      city="Ghaziabad"
+      intro={[
+        "Are you searching for the best PPF installation services in Ghaziabad to protect your car from stone chips, scratches, dust, and harsh UV rays? Ghaziabad car owners are increasingly trusting CLNHYGEN for premium paint protection film (PPF) and professional detailing that delivers showroom-fresh results even in tough NCR conditions.",
+        "With a strong reputation built since 2013 in the region, CLNHYGEN brings expert craftsmanship and top-tier materials to customers in Ghaziabad and surrounding NCR areas.",
+      ]}
+      why={[
+        "Robust protection against stone chips and road debris on busy roads",
+        "Self-healing technology that repairs minor scratches automatically",
+        "Superior hydrophobicity to fight dust and water spots",
+        "Professional paint correction for flawless application",
+        "Enhanced resale value for popular models like Creta, Fortuner, Thar, and luxury cars",
+      ]}
+      services={[
+        { t: "Premium PPF Installation", d: "Full body, front kit, partial, or custom coverage with self-healing films." },
+        { t: "Ceramic & Graphene Coating", d: "Advanced protection and deep gloss." },
+        { t: "Paint Correction & Polishing", d: "Remove swirl marks, oxidation, and restore paint depth." },
+        { t: "Interior & Exterior Detailing", d: "Deep cleaning, leather conditioning, and complete rejuvenation." },
+        { t: "Car Wrapping & Vinyl Wraps", d: "Custom aesthetic upgrades." },
+        { t: "Bike Detailing & Protection Packages", d: "Specialized two-wheeler care." },
+      ]}
+      benefits={[
+        { t: "Self-Healing Protection", d: "Minor scratches vanish with heat (sunlight or warm water)." },
+        { t: "Impact & Scratch Resistance", d: "Guards against road debris, bird droppings, and tree sap." },
+        { t: "Hydrophobic Surface", d: "Water and dirt bead off easily for low-maintenance cleaning." },
+        { t: "UV & Chemical Resistance", d: "Prevents fading and staining in Ghaziabad's climate." },
+        { t: "Invisible & Gloss-Enhancing", d: "Maintains original paint finish perfectly." },
+        { t: "Long-Term Warranty", d: "Professional workmanship and material guarantees." },
+        { t: "Resale Value Boost", d: "Protected vehicles command premium prices." },
+      ]}
+      pricing={[
+        "Partial/Front PPF Kit (bonnet, bumper, mirrors, headlights): ₹25,000 – ₹85,000",
+        "Full Front Package: ₹60,000 – ₹1,50,000+",
+        "Full Body PPF: ₹1,20,000 – ₹3,80,000+ (depending on vehicle size and film type)",
+        "Ceramic Coating Add-ons: ₹10,000 – ₹45,000+",
+        "Bundled Detailing + PPF Packages: Attractive combo pricing",
+      ]}
+      process={[
+        "Vehicle Inspection & Wash — Thorough cleaning and paint assessment",
+        "Paint Correction — Restore flawless surface if needed",
+        "Precision Cutting & Application — Expert fitting in controlled conditions",
+        "Heat Curing & Quality Check — Ensures strong adhesion and seamless finish",
+        "Aftercare Guidance — Personalized tips for longevity",
+      ]}
+      maintenance={[
+        "Wash with pH-neutral shampoo and microfiber towels",
+        "Avoid automatic brush washes initially",
+        "Apply ceramic boosters periodically",
+        "Remove contaminants (bird droppings, sap) promptly",
+        "Schedule annual inspections",
+      ]}
+      faqs={[
+        { q: "Is CLNHYGEN PPF visible?", a: "No — premium films are virtually invisible." },
+        { q: "Can PPF be removed later?", a: "Yes, without damaging the original paint." },
+        { q: "How long does PPF last in Ghaziabad?", a: "Typically 7–10+ years with proper care." },
+        { q: "Do they offer mobile services in Ghaziabad?", a: "Contact them for studio or coordinated doorstep options." },
+        { q: "Is it worth the investment?", a: "Yes — saves on repairs, reduces maintenance, and preserves your car's value." },
+      ]}
+      conclusion="For reliable best PPF installation in Ghaziabad, CLNHYGEN delivers expert protection, stunning results, and peace of mind. Their premium services help your car withstand local conditions while maintaining showroom shine."
+      contact="+91 84499 00095 | +91 90847 24507 | www.clnhygen.com"
+      keywords="best PPF installation Ghaziabad, CLNHYGEN Ghaziabad, PPF services Ghaziabad, paint protection film Ghaziabad, car detailing Ghaziabad, self healing PPF Ghaziabad, premium PPF Ghaziabad, ceramic coating Ghaziabad."
+    />
+
+    {/* GURGAON */}
+    <CitySection
+      city="Gurgaon"
+      intro={[
+        "Are you searching for premium luxury car paint protection in Gurgaon to shield your high-end vehicle from stone chips, swirl marks, dust, and intense UV rays? Gurgaon's luxury car owners are turning to CLNHYGEN for expert Paint Protection Film (PPF), ceramic coatings, and detailing services that preserve showroom perfection even in the demanding NCR environment.",
+        "From BMWs and Mercedes to Audis, Porsches, and Range Rovers — CLNHYGEN delivers tailored protection for luxury vehicles, backed by professional expertise and top-tier materials.",
+      ]}
+      why={[
+        "Specialized protection for delicate high-gloss and matte luxury finishes",
+        "Self-healing PPF that handles daily wear without compromising aesthetics",
+        "Expert paint correction before application for flawless results",
+        "Services that significantly boost resale value of premium vehicles",
+        "Understanding of Gurgaon's climate and driving conditions",
+      ]}
+      services={[
+        { t: "Premium PPF for Luxury Cars", d: "Full body, front-end, or selective coverage with advanced self-healing films." },
+        { t: "Ceramic & Graphene Coating", d: "Nano-level protection with exceptional gloss and hydrophobicity." },
+        { t: "Multi-Layer Paint Correction & Polishing", d: "Restore depth and remove imperfections on high-end paint." },
+        { t: "Full Interior & Exterior Detailing", d: "Deep cleaning, leather conditioning, and cabin rejuvenation." },
+        { t: "Custom Wrapping & Additional Films", d: "For unique aesthetics or extra protection." },
+        { t: "Complete Luxury Packages", d: "PPF + Ceramic topper for ultimate defense and shine." },
+      ]}
+      benefits={[
+        { t: "Self-Healing Technology", d: "Minor scratches disappear with heat exposure." },
+        { t: "Superior Impact Protection", d: "Guards against stone chips, door dings, and road debris." },
+        { t: "Hydrophobic & Self-Cleaning", d: "Repels water, dust, and contaminants common in Gurgaon." },
+        { t: "UV & Chemical Resistance", d: "Prevents fading, oxidation, and etching." },
+        { t: "Invisible & Gloss-Enhancing", d: "Preserves or elevates original factory finish." },
+        { t: "Extended Warranty", d: "Manufacturer-backed material and workmanship guarantees." },
+        { t: "Higher Resale Value", d: "Well-protected luxury cars attract premium buyers." },
+      ]}
+      pricing={[
+        "Partial/Front Luxury PPF Kit: ₹50,000 – ₹1,50,000+",
+        "Full Front Package: ₹1,00,000 – ₹2,50,000+",
+        "Full Body PPF for Luxury Cars: ₹2,50,000 – ₹6,00,000+ (varies by model like SUV vs sedan)",
+        "Ceramic/Graphene Coating: ₹20,000 – ₹80,000+",
+        "Premium Combo Packages (PPF + Coating + Correction): Customized quotes",
+      ]}
+      process={[
+        "Detailed Inspection & Pre-Wash — Assess paint condition",
+        "Multi-Stage Paint Correction — Achieve mirror-like surface",
+        "Precision PPF Application — Custom cutting and fitting in controlled conditions",
+        "Heat Curing & Final Inspection — Ensure flawless adhesion",
+        "Aftercare Consultation — Tailored maintenance plan",
+      ]}
+      maintenance={[
+        "Use pH-neutral, luxury-grade shampoos and microfiber products",
+        "Avoid automatic car washes with brushes",
+        "Apply recommended boosters for enhanced hydrophobicity",
+        "Promptly remove bird droppings, sap, or contaminants",
+        "Annual professional inspection recommended",
+      ]}
+      faqs={[
+        { q: "Is PPF noticeable on luxury cars?", a: "No — premium films are optically clear and virtually invisible." },
+        { q: "Can PPF be applied to matte or special finishes?", a: "Yes, CLNHYGEN offers matte, satin, and gloss-specific films." },
+        { q: "How long does installation take?", a: "1–5 days depending on coverage and vehicle size." },
+        { q: "Is it suitable for new luxury cars?", a: "Ideal on new or nearly new vehicles for maximum protection." },
+        { q: "Do they serve Gurgaon clients?", a: "Yes, CLNHYGEN serves Gurgaon and NCR with studio-level quality." },
+      ]}
+      conclusion="For unmatched luxury car paint protection in Gurgaon, CLNHYGEN offers the expertise, premium materials, and meticulous care your vehicle deserves. Protect your investment while maintaining that exclusive showroom appeal against Gurgaon's challenging conditions."
+      contact="+91 84499 00095 | +91 90847 24507 | www.clnhygen.com"
+      keywords="luxury car paint protection Gurgaon, CLNHYGEN Gurgaon, best PPF for luxury cars Gurgaon, premium PPF Gurgaon, ceramic coating luxury cars Gurgaon, car detailing Gurgaon, self healing PPF Gurgaon, luxury car care Gurugram."
+    />
+
+    <div className="mt-16 bg-card border border-border p-8 rounded-sm">
+      <h3 className="font-display text-2xl">Ready to Protect Your Vehicle?</h3>
+      <p className="mt-4 text-muted-foreground leading-relaxed">
+        Whether you're in Dehradun, Meerut, Ghaziabad, or Gurgaon — CLNHYGEN delivers world-class PPF, ceramic coatings, and detailing services. Contact us today for a consultation and personalized quote.
+      </p>
+      <p className="mt-3 text-xs text-muted-foreground italic">
+        Disclaimer: Prices and availability may vary by city. Confirm directly with CLNHYGEN for the latest offers and service details.
+      </p>
+      <div className="mt-6 flex flex-wrap gap-4">
+        <Link to="/contact" className="inline-flex items-center gap-2 bg-gold text-background px-7 py-3 rounded-sm font-medium hover:opacity-90 transition">
+          Book a Consultation <ArrowRight className="h-4 w-4" />
+        </Link>
+        <Link to="/products" className="inline-flex items-center gap-2 border border-border px-7 py-3 rounded-sm font-medium hover:border-gold transition">
+          Explore Services
+        </Link>
+      </div>
+    </div>
+  </>
+);
+
 const Blog = () => {
   const [active, setActive] = useState<string | null>(null);
+
   const current = articles.find((a) => a.slug === active);
 
   if (current) {
@@ -807,6 +1231,8 @@ const Blog = () => {
             {current.slug === "ppf-vs-ceramic-coating-which-is-better" && <PpfVsCeramicArticle />}
             {current.slug === "how-long-does-paint-protection-film-last" && <PpfLifespanArticle />}
             {current.slug === "common-myths-about-paint-protection-film" && <PpfMythsArticle />}
+            {current.slug === "clnhygen-ppf-detailing-north-india-cities-guide" && <NorthIndiaCitiesArticle />}
+
           </div>
         </section>
       </div>
