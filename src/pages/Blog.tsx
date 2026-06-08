@@ -1,11 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowLeft, CheckCircle2, Sparkles, ShieldCheck, Gem, BookOpen, Car, Timer, AlertTriangle, Wrench, HelpCircle } from "lucide-react";
+import { ArrowRight, ArrowLeft, CheckCircle2, Sparkles, ShieldCheck, Gem, BookOpen, Car, Timer, AlertTriangle, Wrench, HelpCircle, MapPin, Phone } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import ppfHero from "@/assets/blog-ppf.jpg";
 import ppfVsCeramicHero from "@/assets/blog-ppf-vs-ceramic.jpg";
 import ppfLifespanHero from "@/assets/blog-ppf-lifespan.jpg";
 import ppfMythsHero from "@/assets/blog-ppf-myths.jpg";
+import dehradunHero from "@/assets/blog-dehradun.jpg";
+import meerutHero from "@/assets/blog-meerut.jpg";
+import ghaziabadHero from "@/assets/blog-ghaziabad.jpg";
+import gurgaonHero from "@/assets/blog-gurgaon.jpg";
+
 
 type Article = {
   slug: string;
