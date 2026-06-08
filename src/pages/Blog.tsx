@@ -1780,6 +1780,7 @@ const Blog = () => {
             {current.slug === "common-myths-about-paint-protection-film" && <PpfMythsArticle />}
             {current.slug === "clnhygen-ppf-detailing-north-india-cities-guide" && <NorthIndiaCitiesArticle />}
             {current.slug === "why-stek-is-worlds-leading-ppf-brand" && <StekArticle />}
+            {current.slug === "clnhygen-premium-brand-distributor-india-stek-carpro-autokrom-saint-gobain" && <BrandDistributorArticle />}
 
 
           </div>
