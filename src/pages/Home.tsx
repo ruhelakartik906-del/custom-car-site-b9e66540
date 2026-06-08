@@ -32,7 +32,15 @@ import detailing from "@/assets/service-detailing.jpg";
 import paint from "@/assets/service-paint.jpg";
 
 const brands = [
-  "Mohkampur Industrial Area, Meerut, Uttar Pradesh",
+  "Meerut",
+  "Dehradun",
+  "Bijnor",
+  "Vikas Nagar",
+  "Muzaffarnagar",
+  "Ghaziabad",
+  "Delhi",
+  "Gurgaon",
+  "Bareilly",
 ];
 
 const services = [
