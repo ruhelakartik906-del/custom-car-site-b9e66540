@@ -48,7 +48,16 @@ const articles: Article[] = [
       "Despite its growing popularity, many misconceptions surround PPF. In this article, we separate fact from fiction and uncover the truth behind the most common PPF myths.",
     image: ppfMythsHero,
   },
+  {
+    slug: "clnhygen-ppf-detailing-north-india-cities-guide",
+    category: "City Guides",
+    title: "CLNHYGEN PPF & Car Detailing Across North India: Dehradun, Meerut, Ghaziabad & Gurgaon Complete Guide",
+    excerpt:
+      "From Dehradun's Himalayan terrain to Gurgaon's luxury car capital — a complete city-wise guide to CLNHYGEN's PPF, ceramic coating, and detailing services across North India.",
+    image: ppfHero,
+  },
 ];
+
 
 const Bullet = ({ children }: { children: React.ReactNode }) => (
   <li className="flex items-start gap-3 text-muted-foreground">
